@@ -1,0 +1,10 @@
+.idea
+venv
+.env
+db.sqlite3
+/migrations
+/src/migrations/
+.vscode
+settings.json
+launch.json
+.pylintrc

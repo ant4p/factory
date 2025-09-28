@@ -1,0 +1,305 @@
+{% load static %}
+
+<div class="container">
+    <!-- Bootstrap Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white rounded shadow-sm sticky-top py-3 my-3">
+        <div class="container-fluid">
+            <!-- Burger button - always visible -->
+            <button class="btn btn-link p-0 me-3" type="button" data-bs-toggle="modal" data-bs-target="#fullscreenMenu">
+                <svg width="16" height="12" viewBox="0 0 16 12" class="burger-icon">
+                    <path d="M872,958h-8a1,1,0,0,1-1-1h0a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1h0A1,1,0,0,1,872,958Zm6-5H864a1,1,0,0,1,0-2h14A1,1,0,0,1,878,953Zm0-5H864a1,1,0,0,1,0-2h14A1,1,0,0,1,878,948Z" transform="translate(-863 -946)" fill="#ff7b2b"></path>
+                </svg>
+            </button>
+            
+            <a class="navbar-brand fw-bold text-orange fs-3" href="/">
+                Factory
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Услуги Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium px-3 text-uppercase" href="#" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            УСЛУГИ
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                            <!-- Банковские гарантии Submenu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center" 
+                                    href={% url 'services:services_bg' %}>
+                                    Банковские гарантии
+                                    <span class="submenu-arrow">›</span>
+                                </a>
+                                <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_44_fz' %}>44 ФЗ</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_223_fz' %}>223 ФЗ</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_275_fz' %}>275 ФЗ</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_615_pp' %}>615 ПП</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_commercial' %}>Коммерческие БГ</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_payment' %}>Платежная</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_bg_another_npa' %}>Другой НПА</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Кредитование Submenu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center" 
+                                    href={% url 'services:services_cred' %}>
+                                    Кредитование
+                                    <span class="submenu-arrow">›</span>
+                                </a>
+                                <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href={% url 'services:services_cred_working_capital' %}>Пополнение оборотных средств</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_cred_tender' %}>Тендерный кредит/займ</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_cred_invest' %}>Инвестиционный кредит</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_cred_contract' %}>Исполнение контракта</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_cred_refinance' %}>Рефинансирование кредитов</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Лизинг Submenu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center" 
+                                    href={% url 'services:services_lizing' %}>
+                                    Лизинг
+                                    <span class="submenu-arrow">›</span>
+                                </a>
+                                <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_car' %}>Легковой автомобиль</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_truck' %}>Грузовой автотранспорт</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_special_tech' %}>Спецтехника</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_equipment' %}>Оборудование</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_used' %}>Авто с пробегом</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_other_property' %}>Другое имущество</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_factoring' %}>Факторинг</a></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_international_payments' %}>Международные платежи</a></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_insurance' %}>Страхование</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- О компании Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium px-3 text-uppercase" href="#" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            О КОМПАНИИ
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                            <li><a class="dropdown-item" href={% url 'about:about_basic' %}>Главное</a></li>
+                            <li><a class="dropdown-item" href={% url 'about:about_our_team' %}>Наша команда</a></li>
+                            <li><a class="dropdown-item" href={% url 'about:about_banks_partners' %}>Банки партнёры</a></li>
+                            <li><a class="dropdown-item" href={% url 'about:about_value_cooperation' %}>Оценка сотрудничества</a></li>
+                            <li><a class="dropdown-item" href={% url 'about:about_job' %}>Вакансии</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Полезное Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium px-3 text-uppercase" href="#" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ПОЛЕЗНОЕ
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
+                            <li><a class="dropdown-item" href={% url 'useful:useful_regulatory_docs' %}>Нормативная документация</a></li>
+                            <li><a class="dropdown-item" href={% url 'useful:useful_articles_and_links' %}>Статьи и полезные ссылки</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Контакты -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3 text-uppercase" href={% url 'src:contacts' %}>КОНТАКТЫ</a>
+                    </li>
+                </ul>
+
+                <!-- Телефон -->
+                <div class="d-flex align-items-center">
+                    <a href="tel:+74951234567" class="btn btn-orange  fw-medium">
+                        <i class="bi bi-telephone me-2"></i>
+                        +7 (495) 123-45-67
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Menu Modal -->
+    <div class="modal fade"  id="fullscreenMenu" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-light">
+                <!-- Заменить modal-header -->
+                <div class="modal-header border-0 d-flex align-items-start justify-content-center">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <h2 class="modal-title text-orange fw-bold mb-0" >Factory</h2>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row g-4">
+                            <!-- Услуги -->
+                            <div class="col-lg-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="text-orange mb-4">УСЛУГИ</h4>
+                                        <div class="accordion" id="servicesAccordion">
+                                            <!-- Банковские гарантии -->
+                                            <div class="accordion-item border-0 mb-2">
+                                                <h5 class="accordion-header">
+                                                    <button class="accordion-button collapsed bg-light text-orange fw-medium" 
+                                                            type="button" data-bs-toggle="collapse" 
+                                                            data-bs-target="#bankGuarantees" aria-expanded="false">
+                                                        Банковские гарантии
+                                                    </button>
+                                                </h5>
+                                                <div id="bankGuarantees" class="accordion-collapse collapse" 
+                                                        data-bs-parent="#servicesAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href={% url 'services:services_bg_44_fz' %} class="list-group-item list-group-item-action border-0">44 ФЗ</a>
+                                                            <a href={% url 'services:services_bg_223_fz' %} class="list-group-item list-group-item-action border-0">223 ФЗ</a>
+                                                            <a href={% url 'services:services_bg_275_fz' %} class="list-group-item list-group-item-action border-0">275 ФЗ</a>
+                                                            <a href={% url 'services:services_bg_615_pp' %} class="list-group-item list-group-item-action border-0">615 ПП</a>
+                                                            <a href={% url 'services:services_bg_commercial' %} class="list-group-item list-group-item-action border-0">Коммерческие БГ</a>
+                                                            <a href={% url 'services:services_bg_payment' %} class="list-group-item list-group-item-action border-0">Платежная</a>
+                                                            <a href={% url 'services:services_bg_another_npa' %} class="list-group-item list-group-item-action border-0">Другой НПА</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Кредитование -->
+                                            <div class="accordion-item border-0 mb-2">
+                                                <h5 class="accordion-header">
+                                                    <button class="accordion-button collapsed bg-light text-orange fw-medium" 
+                                                            type="button" data-bs-toggle="collapse" 
+                                                            data-bs-target="#credits" aria-expanded="false">
+                                                        Кредитование
+                                                    </button>
+                                                </h5>
+                                                <div id="credits" class="accordion-collapse collapse" 
+                                                        data-bs-parent="#servicesAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href={% url 'services:services_cred_working_capital' %} class="list-group-item list-group-item-action border-0">Пополнение оборотных средств</a>
+                                                            <a href={% url 'services:services_cred_tender' %} class="list-group-item list-group-item-action border-0">Тендерный кредит/займ</a>
+                                                            <a href={% url 'services:services_cred_invest' %} class="list-group-item list-group-item-action border-0">Инвестиционный кредит</a>
+                                                            <a href={% url 'services:services_cred_contract' %} class="list-group-item list-group-item-action border-0">Исполнение контракта</a>
+                                                            <a href={% url 'services:services_cred_refinance' %} class="list-group-item list-group-item-action border-0">Рефинансирование кредитов</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Лизинг -->
+                                            <div class="accordion-item border-0 mb-2">
+                                                <h5 class="accordion-header">
+                                                    <button class="accordion-button collapsed bg-light text-orange fw-medium" 
+                                                            type="button" data-bs-toggle="collapse" 
+                                                            data-bs-target="#leasing" aria-expanded="false">
+                                                        Лизинг
+                                                    </button>
+                                                </h5>
+                                                <div id="leasing" class="accordion-collapse collapse" 
+                                                        data-bs-parent="#servicesAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href={% url 'services:services_lizng_car' %} class="list-group-item list-group-item-action border-0">Легковой автомобиль</a>
+                                                            <a href={% url 'services:services_lizng_truck' %} class="list-group-item list-group-item-action border-0">Грузовой автотранспорт</a>
+                                                            <a href={% url 'services:services_lizng_special_tech' %} class="list-group-item list-group-item-action border-0">Спецтехника</a>
+                                                            <a href={% url 'services:services_lizng_equipment' %} class="list-group-item list-group-item-action border-0">Оборудование</a>
+                                                            <a href={% url 'services:services_lizng_used' %} class="list-group-item list-group-item-action border-0">Авто с пробегом</a>
+                                                            <a href={% url 'services:services_lizng_other_property' %} class="list-group-item list-group-item-action border-0">Другое имущество</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Остальные услуги -->
+                                            <a href={% url 'services:services_factoring' %} class="btn btn-outline-orange w-100 mb-2 text-start">Факторинг</a>
+                                            <a href={% url 'services:services_international_payments' %} class="btn btn-outline-orange w-100 text-start">Международные платежи</a>
+                                            <a href={% url 'services:services_insurance' %} class="btn btn-outline-orange w-100 text-start">Страхование</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- О компании -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="text-orange mb-4">О КОМПАНИИ</h4>
+                                        <div class="list-group list-group-flush">
+                                            <a a class="dropdown-item" href={% url 'about:about_basic' %} class="list-group-item list-group-item-action border-0">Главное</a>
+                                            <a a class="dropdown-item" href={% url 'about:about_our_team' %} class="list-group-item list-group-item-action border-0">Наша команда</a>
+                                            <a a class="dropdown-item" href={% url 'about:about_banks_partners' %} class="list-group-item list-group-item-action border-0">Банки партнёры</a>
+                                            <a a class="dropdown-item" href={% url 'about:about_value_cooperation' %} class="list-group-item list-group-item-action border-0">Оценка сотрудничества</a>
+                                            <a a class="dropdown-item" href={% url 'about:about_job' %} class="list-group-item list-group-item-action border-0">Вакансии</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Полезное -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="text-orange mb-4">ПОЛЕЗНОЕ</h4>
+                                        <div class="list-group list-group-flush">
+                                            <a href={% url 'useful:useful_regulatory_docs' %} class="list-group-item list-group-item-action border-0">Нормативная документация</a>
+                                            <a href={% url 'useful:useful_articles_and_links' %} class="list-group-item list-group-item-action border-0">Статьи и полезные ссылки</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Контакты -->
+                            <div class="col-12">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-orange mb-4">КОНТАКТЫ</h4>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a href="tel:+74951234567" class="btn btn-orange w-100 mb-2" style="font-size: 1.3rem;">
+                                                    <i class="bi bi-telephone-fill me-2"></i>
+                                                    <span>+7 (495) 123-45-67</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="https://t.me/factory" class="btn btn-outline-orange w-100 mb-2" style="font-size: 1.3rem;">
+                                                    <i class="bi bi-telegram me-2"></i>
+                                                    <span>Telegram</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="mailto:info@factory.ru" class="btn btn-outline-orange w-100 mb-2" style="font-size: 1.3rem;">
+                                                    <i class="bi bi-envelope-fill me-2"></i>
+                                                    <span>info@factory.ru</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="#" class="btn btn-outline-orange w-100 mb-2" style="font-size: 1.3rem;">
+                                                    <i class="bi bi-geo-alt-fill me-2"></i>
+                                                    <span>Адрес офиса</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

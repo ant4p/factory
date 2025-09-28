@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-6">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-dark mb-4">
+                    Наша<br>
+                    <span class="text-orange">Компания</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-orange btn-lg px-4">
+                        Информация
+                    </a>
+                    <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
+                        На связи
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6">
+                <div class="bg-light rounded-3 p-5 text-center">
+                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
+                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                </div>
+            </div>
+        </section>
+
+
+
+<section id="services" class="mb-6">
+    <div class="text-center mb-5">
+        <h2 class="text-orange text-uppercase fw-bold mb-3">Узнайте о нас больше</h2>
+        <p class="text-muted">Информация жизни компании, партнёрах, актуальные вакансии </p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Главное -->
+        <div class="col-md-6">
+            <a href={% url 'about:about_basic' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Главное</h5>
+                        <p class="text-muted">Информация о компании</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Наша Команда -->
+        <div class="col-md-6">
+            <a href={% url 'about:about_our_team' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Наша Команда</h5>
+                        <p class="text-muted">Наша команда профессионалов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Банки партнеры -->
+        <div class="col-md-12">
+            <a href={% url 'about:about_banks_partners' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Банки партнеры</h5>
+                        <p class="text-muted">Информация о банках партнёрах</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Оценка сотрудничества -->
+        <div class="col-md-6">
+            <a href={% url 'about:about_value_cooperation' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Оценка сотрудничества</h5>
+                        <p class="text-muted">Мы ценим долговременное сотрудничество, а клиенты ценят нас</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Вакансии -->
+        <div class="col-md-6">
+            <a href={% url 'about:about_job' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Вакансии</h5>
+                        <p class="text-muted">Присоединяйся к нашей команде</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+{% include "contacts.html" %}
+
+{% endblock content %}

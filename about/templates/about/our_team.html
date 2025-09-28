@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-6">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-dark mb-4">
+                    Наша<br>
+                    <span class="text-orange">команда</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-orange btn-lg px-4">
+                        Наши услуги
+                    </a>
+                    <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
+                        Консультация
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6">
+                <div class="bg-light rounded-3 p-5 text-center">
+                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
+                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                </div>
+            </div>
+        </section>
+
+<section id="services" class="mb-6">
+    <div class="text-center mb-5">
+        <h2 class="text-orange text-uppercase fw-bold mb-3">Сотрудники</h2>
+        <p class="text-muted">!!!!!</p>
+    </div>
+    
+    {% if items %}
+    <div class="row g-2">
+        {% for item in items %}
+        {% if item %}
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body p-6">
+                    <div class="row">
+                        <!-- Фото слева -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div class="image-container" style="height: 400px; width: 100%; overflow: hidden;">
+                                {% if item.photo %}
+                                    <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-cover">
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <!-- Информация справа -->
+                        <div class="col-12 col-md-6">
+                            {% if item.job_title %}
+                                <h5 class="mb-3">{{ item.job_title }}</h5>
+                                <h5 class="mb-3">{{ item.fio }}</h5>
+                                <h5 class="mb-3">{{ item.email }}</h5>
+                                <h5 class="mb-3">{{ item.phone }}</h5>
+                                <h5 class="mb-3">{{ item.information }}</h5>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>
+
+
+
+
+{% include "contacts.html" %}
+
+{% endblock content %}

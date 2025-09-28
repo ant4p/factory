@@ -1,0 +1,91 @@
+<footer class="py-5">
+    <div class="container">
+        <div class="bg-white rounded shadow-sm p-4"> <!-- Белый блок контейнера остаётся -->
+            <div class="row g-4">
+                <!-- Логотип и описание -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand fw-bold text-orange fs-3 mb-3 d-block" href="#">
+                        Factory
+                    </a>
+                    <p class="text-muted mb-4">
+                        Профессиональные финансовые решения для бизнеса. 
+                        Банковские гарантии, кредитование, лизинг и другие услуги 
+                        для вашего успеха.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-orange text-decoration-none">
+                            <i class="bi bi-telegram fs-5"></i>
+                        </a>
+                        <a href="#" class="text-orange text-decoration-none">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="#" class="text-orange text-decoration-none">
+                            <i class="bi bi-envelope fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Услуги -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-orange text-uppercase fw-bold mb-4">Услуги</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href={% url 'services:services_bg' %} class="text-body text-decoration-none">Банковские гарантии</a></li>
+                        <li class="mb-2"><a href={% url 'services:services_cred' %} class="text-body text-decoration-none">Кредитование</a></li>
+                        <li class="mb-2"><a href={% url 'services:services_lizing' %} class="text-body text-decoration-none">Лизинг</a></li>
+                        <li class="mb-2"><a href={% url 'services:services_factoring' %} class="text-body text-decoration-none">Факторинг</a></li>
+                        <li class="mb-2"><a href={% url 'services:services_international_payments' %} class="text-body text-decoration-none">Международные платежи</a></li>
+                        <li class="mb-2"><a ref={% url 'services:services_insurance' %} class="text-body text-decoration-none">Страхование</a></li>
+                    </ul>
+                </div>
+
+                <!-- Компания -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-orange text-uppercase fw-bold mb-4">Компания</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href={% url 'about:about_basic' %} class="text-body text-decoration-none">Главное</a></li>
+                        <li class="mb-2"><a href={% url 'about:about_our_team' %} class="text-body text-decoration-none">Команда</a></li>
+                        <li class="mb-2"><a href={% url 'about:about_banks_partners' %} class="text-body text-decoration-none">Партнёры</a></li>
+                        <li class="mb-2"><a href={% url 'about:about_value_cooperation' %} class="text-body text-decoration-none">Оценка сотрудничества</a></li>
+                        <li class="mb-2"><a href={% url 'about:about_job' %} class="text-body text-decoration-none">Вакансии</a></li>
+                    </ul>
+                </div>
+
+                <!-- Контакты -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-orange text-uppercase fw-bold mb-4">Контакты</h6>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-telephone text-orange me-3"></i>
+                            <a href="tel:+74951234567" class="text-body text-decoration-none">+7 (495) 123-45-67</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-envelope text-orange me-3"></i>
+                            <a href="mailto:info@factory.ru" class="text-body text-decoration-none">info@factory.ru</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt text-orange me-3"></i>
+                            <span class="text-body">Москва, ул. Примерная, д. 123</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-clock text-orange me-3"></i>
+                            <span class="text-body">Пн-Пт: 9:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Нижняя часть футера -->
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0"> ®Фабрика Банковских Продуктов. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-muted text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-6">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-dark mb-4">
+                    223<br>
+                    <span class="text-orange">Федеральный закон</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-orange btn-lg px-4">
+                        Наши услуги
+                    </a>
+                    <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
+                        Консультация
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6">
+                <div class="bg-light rounded-3 p-5 text-center">
+                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
+                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+{% include "contacts.html" %}
+
+{% endblock content %}

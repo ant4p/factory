@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-6">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-dark mb-4">
+                    Банковские гарантии<br>
+                    <span class="text-orange">для вашего бизнеса</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-orange btn-lg px-4">
+                        Наши услуги
+                    </a>
+                    <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
+                        Консультация
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6">
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/main_page.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
+                </div>
+            </div>
+        </section>
+
+
+
+<section id="services" class="mb-6">
+    <div class="text-center mb-5">
+        <h2 class="text-orange text-uppercase fw-bold mb-3">Виды банковских гарантий</h2>
+        <p class="text-muted">!!!!!</p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- 44  -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_44_fz' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">44-ФЗ</h5>
+                        <p class="text-muted">Быстрое оформление гарантий для участия в тендерах и обеспечения контрактов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 223 -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_223_fz' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">223-ФЗ</h5>
+                        <p class="text-muted">Кредиты на развитие бизнеса, пополнение оборотных средств и инвестиционные проекты</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 275 -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_275_fz' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">275-ФЗ</h5>
+                        <p class="text-muted">Приобретение оборудования, транспорта и техники на выгодных условиях</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 615 -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_615_pp' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">615 ПП</h5>
+                        <p class="text-muted">Финансирование под уступку денежных требователей для роста бизнеса</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Коммерческая -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_commercial' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Коммерческие БГ</h5>
+                        <p class="text-muted">Организация международных расчетов и валютных операций</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Платежная -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_payment' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-shield text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Платежная</h5>
+                        <p class="text-muted">Страховые продукты для бизнеса и комплексной защиты активов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- НПА -->
+        <div class="col-md-6">
+            <a href={% url 'services:services_bg_another_npa' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-shield text-orange" style="font-size: 2.5rem;"></i>
+                        <h5 class="mt-3 mb-3">Другой НПА</h5>
+                        <p class="text-muted">Страховые продукты для бизнеса и комплексной защиты активов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% include "contacts.html" %}
+
+{% endblock content %}

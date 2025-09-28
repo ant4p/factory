@@ -1,0 +1,728 @@
+:root {
+    --orange: #f54f29;
+    --orange-light: #f54f29;
+    --orange-dark: #f54f29;
+}
+
+body {
+    background: #f54f29;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Orange color utilities */
+.text-orange {
+    color: var(--orange) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+.border-orange {
+    border-color: var(--orange) !important;
+}
+
+/* Button styles */
+.btn-orange {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: var(--orange-dark);
+    border-color: var(--orange-dark);
+    color: white;
+}
+
+.btn-outline-orange {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: white;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    border: 1px solid rgba(245, 79, 41, 0.2);
+}
+
+.dropdown-item:hover {
+    background-color: var(--orange-light);
+    color: var(--orange);
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-toggle.show::after {
+    transform: rotate(180deg);
+}
+
+/* Custom dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.1rem;
+}
+
+/* Submenu arrow styling */
+.submenu-arrow {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-left: 0.5rem;
+}
+
+.dropdown-submenu > a:hover .submenu-arrow {
+    color: var(--orange);
+}
+
+/* Show submenu on hover for desktop */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-submenu:hover > a .submenu-arrow {
+        color: var(--orange);
+    }
+}
+
+/* Burger icon styles - always visible */
+.burger-icon {
+    transition: transform 0.2s ease;
+    width: 20px;
+    height: 16px;
+}
+
+.burger-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Hide Bootstrap's default toggle button */
+.navbar-toggler {
+    display: none !important;
+}
+
+/* Navbar styles */
+.nav-link {
+    transition: color 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: var(--orange) !important;
+}
+
+/* Uppercase text for menu items */
+.text-uppercase {
+    letter-spacing: 0.5px;
+}
+
+/* Accordion styles */
+.accordion-button:not(.collapsed) {
+    background-color: var(--orange-light);
+    color: var(--orange);
+}
+
+.accordion-button:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 0.2rem rgba(245, 79, 41, 0.25);
+}
+
+/* Card styles */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 79, 41, 0.15) !important;
+}
+
+/* List group styles */
+.list-group-item-action:hover {
+    background-color: var(--orange-light);
+    color: var(--orange);
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    
+    .btn {
+        margin-top: 0.5rem;
+    }
+    
+    /* Stack submenus on mobile */
+    .dropdown-submenu .dropdown-menu {
+        position: static;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* Smooth transitions */
+.dropdown-menu,
+.accordion-collapse,
+.card {
+    transition: all 0.3s ease;
+}
+
+/* Custom shadow for dropdowns */
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(245, 79, 41, 0.1) !important;
+}
+
+/* Hover effects for buttons */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.modal-header .container {
+    max-width: 900px;
+    padding: 0 15px;
+}
+
+.nav-link:focus,
+.nav-link.active {
+    color: var(--orange) !important;
+    background-color: #f8f9fa !important;
+}
+
+/* Для мобильного меню Bootstrap */
+.navbar-nav .nav-link.show {
+    color: var(--orange) !important;
+    background-color: #f8f9fa !important;
+}
+
+.navbar-nav .show > .nav-link {
+    color: var(--orange) !important;
+    background-color: #f8f9fa !important;
+}
+
+.list-group-item-action:focus,
+.list-group-item-action.active {
+    background-color: #f8f9fa !important;
+    color: var(--orange) !important;
+    border-color: #dee2e6;
+}
+
+/* Строки: Полное переопределение Bootstrap стилей dropdown */
+.navbar-nav .dropdown-menu .dropdown-item:active,
+.navbar-nav .dropdown-menu .dropdown-item:focus,
+.navbar-nav .dropdown-menu .dropdown-item.active,
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    color: #f54f29 !important;
+}
+
+/* Убрать все синие эффекты Bootstrap */
+.navbar-nav .dropdown-item:active,
+.navbar-nav .dropdown-item:focus, 
+.navbar-nav .dropdown-item.active {
+    background-color: #f8f9fa !important;
+    color: #f54f29 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Принудительное переопределение псевдоклассов */
+.navbar .dropdown-item:not(.btn):active,
+.navbar .dropdown-item:not(.btn):focus {
+    background-color: #f8f9fa !important;
+    color: #f54f29 !important;
+}
+
+.navbar-light.bg-white {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Выравнивание бургер-кнопки и логотипа */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    height: 40px;
+}
+
+/* Контейнер меню */
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Навигационное меню */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.burger-icon path,
+.burger-icon line,
+.burger-icon rect,
+.burger-icon polygon {
+    stroke: #f54f29 !important;
+    fill: #f54f29 !important;
+}
+
+.burger-icon:hover path,
+.burger-icon:hover line,
+.burger-icon:hover rect,
+.burger-icon:hover polygon {
+    stroke: #f54f29 !important;
+    fill: #f54f29 !important;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+}
+
+footer a.text-body {
+    transition: color 0.2s ease;
+}
+
+footer a.text-body:hover {
+    color: var(--orange) !important;
+}
+
+footer .bi {
+    transition: transform 0.2s ease;
+}
+
+footer a:hover .bi {
+    transform: scale(1.1);
+}
+
+footer a.text-muted:hover {
+    color: var(--orange) !important;
+}
+
+/* Main Content Styles */
+main {
+    min-height: 60vh;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(245, 79, 41, 0.15) !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .display-4 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Buttons Styles */
+.btn-outline-orange {
+    transition: all 0.3s ease;
+    border: 2px solid var(--orange);
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.btn-outline-orange:hover i,
+.btn-outline-orange:hover span {
+    color: white !important;
+}
+
+/* Carousel Styles */
+.banks-carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.banks-carousel-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.bank-item {
+    flex-shrink: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.bank-logo {
+    height: 60px; /* Увеличиваем высоту с 40px до 60px */
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+/* Подсветка только при наведении на конкретный логотип */
+.bank-item:hover .bank-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.2); /* Увеличиваем масштаб с 1.05 до 1.2 */
+    height: 60px; /* Сохраняем исходный размер при увеличении */
+}
+
+/* Анимация бесконечной прокрутки */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .banks-carousel-track {
+        animation-duration: 20s;
+    }
+    
+    .bank-item {
+        padding: 0 15px;
+    }
+    
+    .bank-logo {
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banks-carousel-track {
+        animation-duration: 15s;
+    }
+    
+    .bank-item {
+        padding: 0 10px;
+    }
+    
+    .bank-logo {
+        height: 35px;
+    }
+}
+
+/* Пауза при наведении на контейнер */
+.banks-carousel-container:hover .banks-carousel-track {
+    animation-play-state: paused;
+}
+
+/* Затемнение краев для визуального эффекта */
+.banks-carousel-container::before,
+.banks-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.banks-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.banks-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+/* Поддержка prefers-reduced-motion для доступности */
+@media (prefers-reduced-motion: reduce) {
+    .banks-carousel-track {
+        animation: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .banks-carousel-container::before,
+    .banks-carousel-container::after {
+        display: none;
+    }
+}
+
+
+/* Стили для иконок в контактных секциях */
+.btn-outline-orange i {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover i {
+    transform: scale(1.2);
+    color: var(--orange) !important; /* Иконки остаются оранжевыми */
+}
+
+/* Убираем исчезновение иконок и добавляем плавное увеличение */
+.btn-outline-orange:hover {
+    background-color: white; /* Фон остается белым */
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* Для кнопок с классом btn-orange (телефон в контактах) */
+.btn-orange i {
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover i {
+    transform: scale(1.2);
+}
+
+/* Убедимся, что текст также не исчезает */
+.btn-outline-orange span {
+    transition: color 0.3s ease;
+}
+
+.btn-outline-orange:hover span {
+    color: var(--orange) !important; /* Текст также оранжевый */
+}
+
+.navbar .dropdown-item:active {
+    background-color: #f8f9fa !important;
+    color: #ff7b2b !important;
+}
+
+/* Стили для пагинатора */
+.articles__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.articles__pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--orange);
+    background-color: transparent;
+    border-radius: 8px;
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.articles__pagination-button:hover {
+    background-color: var(--orange);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 79, 41, 0.3);
+}
+
+.articles__pagination-button.is-active {
+    background-color: var(--orange);
+    color: white;
+    border-color: var(--orange);
+    box-shadow: 0 2px 8px rgba(245, 79, 41, 0.2);
+}
+
+/* СТРЕЛКИ БЕЗ ЗАЛИВКИ */
+.articles__pagination-button.is-arrow {
+    background-color: transparent;
+    border-color: var(--orange);
+}
+
+.articles__pagination-button.is-arrow svg path {
+    stroke: var(--orange);
+    transition: stroke 0.3s ease;
+}
+
+.articles__pagination-button.is-arrow:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.articles__pagination-button.is-arrow:hover svg path {
+    stroke: white;
+}
+
+/* Стили для неактивных состояний */
+.articles__pagination-button:disabled,
+.articles__pagination-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.articles__pagination-button:disabled:hover,
+.articles__pagination-button.disabled:hover {
+    background-color: transparent;
+    color: var(--orange);
+    transform: none;
+    box-shadow: none;
+}
+
+.articles__pagination-button.is-arrow:disabled,
+.articles__pagination-button.is-arrow.disabled {
+    background-color: transparent;
+    border-color: rgba(245, 79, 41, 0.5);
+}
+
+.articles__pagination-button.is-arrow:disabled:hover,
+.articles__pagination-button.is-arrow.disabled:hover {
+    background-color: transparent;
+    border-color: rgba(245, 79, 41, 0.5);
+    transform: none;
+}
+
+.articles__pagination-button.is-arrow:disabled svg path,
+.articles__pagination-button.is-arrow.disabled svg path {
+    stroke: rgba(245, 79, 41, 0.5);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .articles__pagination {
+        gap: 6px;
+    }
+    
+    .articles__pagination-button {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .articles__pagination {
+        gap: 4px;
+    }
+    
+    .articles__pagination-button {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* Эллипсы для пропущенных страниц */
+.articles__pagination-ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+/* Состояния фокуса для доступности - УПРОЩЕНО */
+.articles__pagination-button:focus {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+/* Убираем стандартные стили ссылок */
+.articles__pagination a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.articles__pagination a:focus {
+    outline: none;
+}
+
+.articles__pagination a:visited {
+    color: inherit;
+}
+
+/* Убираем выделение при клике на мобильных */
+.articles__pagination-button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Скрытие пагинатора когда не нужен */
+.articles__pagination:empty {
+    display: none;
+}
+
+/* Убираем трансформации при ховере для страниц-цифр */
+.page-item {
+    transition: none;
+}
+
+.page-item:hover {
+    transform: none;
+}
