@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView
 
 
-class ShowServices(TemplateView):
-    template_name = "services/services.html"
+# class ShowServices(TemplateView):
+#     template_name = "services/services.html"
 
 
 class ShowServicesPageBG(TemplateView):

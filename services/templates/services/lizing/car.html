@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Лизинг
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,12 +25,44 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_11.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
+
+
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Лизинг легковых автомобилей</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">
+                    Лизинг легковых автомобилей: эффективная модель обновления автопарка.
+                    Лизинг легковых автомобилей представляет собой современный финансовый инструмент, позволяющий предприятиям и индивидуальным предпринимателям обновлять транспортные средства с минимальными первоначальными затратами. Данная услуга особенно востребована компаниями, использующими служебный транспорт для представительских целей или обеспечения мобильности сотрудников. Ключевым преимуществом лизинга является возможность оптимизации налоговой нагрузки за счет отнесения лизинговых платежей на себестоимость и ускоренной амортизации. Наша компания предлагает комплексные лизинговые решения с индивидуальным графиком платежей и гибкими условиями выкупа.
+                </p>
+            </div>       
+        </section>
+
+        <section class="bg-light rounded-3 p-5 mb-6">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Оптимизация  </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;">налогов  в рамках действующего законодательства</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Снижение рисков </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> связанных с эксплуатацией и остаточной стоимостью транспорта</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Возможность</h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> регулярного обновления автопарка без капитальных вложений</p>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+
 {% include "contacts.html" %}
 
 {% endblock content %}

@@ -29,3 +29,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+class BackToTop {
+    constructor() {
+        this.button = document.getElementById('backToTop');
+        this.threshold = 300;
+        this.init();
+    }
+    
+    init() {
+        this.addScrollListener();
+        this.addClickListener();
+    }
+    
+    addScrollListener() {
+        window.addEventListener('scroll', () => {
+            this.toggleVisibility();
+        });
+        
+        // Проверяем начальную позицию
+        this.toggleVisibility();
+    }
+    
+    addClickListener() {
+        this.button.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.scrollToTop();
+        });
+    }
+    
+    toggleVisibility() {
+        if (window.pageYOffset > this.threshold) {
+            this.button.classList.add('show');
+        } else {
+            this.button.classList.remove('show');
+        }
+    }
+    
+    scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Инициализация когда DOM загружен
+document.addEventListener('DOMContentLoaded', () => {
+    new BackToTop();
+});

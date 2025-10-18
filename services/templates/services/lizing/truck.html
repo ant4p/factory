@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Лизинг
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,12 +25,43 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_11.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
+
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Лизинг грузовых автомобилей</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">
+                    Лизинг грузовых автомобилей: оптимизация логистических процессов предприятий.
+                    Лизинг грузового транспорта представляет собой финансовый инструмент, позволяющий компаниям обновлять и расширять автопарк без значительных капитальных затрат. Данная услуга особенно актуальна для логистических операторов, производственных предприятий и торговых компаний, чья деятельность напрямую зависит от эффективности транспортной инфраструктуры. Основным преимуществом лизинга является возможность применения ускоренной амортизации, что позволяет существенно снизить налоговую нагрузку предприятия. Наша компания разрабатывает индивидуальные лизинговые программы с учетом тоннажа, специализации и интенсивности эксплуатации транспортных средств.
+                </p>
+            </div>       
+        </section>
+
+        <section class="bg-light rounded-3 p-5 mb-6">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Масштабирование   </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;">автопарка в соответствии с растущими потребностями бизнеса</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Финансовая гибкость </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> благодаря разнообразию графиков и размеров лизинговых платежей</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Снижение рисков</h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> связанных с ремонтом и преждевременным износом коммерческого транспорта</p>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+
 {% include "contacts.html" %}
 
 {% endblock content %}

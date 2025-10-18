@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Вакансии
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,16 +25,72 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_7.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Актуальные вакансии</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Мы создали среду, где профессионализм сочетается с заботой о каждом сотруднике. Наша компания предлагает комплекс условий для роста и развития, признавая, что успех бизнеса начинается с комфорта и мотивации команды. Мы обеспечиваем конкурентную заработную плату с системой бонусов, привязанной к личным результатам. Сотрудники получают возможности для постоянного развития через корпоративное обучение и программы поддержки дополнительного образования.
+                    Карьерные перспективы реализуются через четкую систему профессионального роста с возможностью продвижения внутри компании. Мы предлагаем гибкий формат работы, включая удаленные режимы и адаптивный график для поддержания баланса между работой и личной жизнью. Современный офис в бизнес-центре создает комфортную среду с зонами для отдыха и собственной столовой.
+                    Корпоративная культура поддерживается через регулярные мероприятия, способствующие укреплению командного духа. Финансовая стабильность гарантируется официальным трудоустройством и своевременными выплатами. Мы инвестируем в развитие наших сотрудников, потому что верим: именно люди являются главным активом компании. Присоединяйтесь к нашей команде для совместного достижения новых профессиональных высот.
+                    
+                </p>
+            </div>
+            
+            {% if items %}
+            {% for item in items %}
+            {% if item %}
+
+            <div class="row g-2">
+                <div class="col-md-12">
+                    <a href="{{ item.get_absolute_url }}" class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body p-4">
+                                <div class="row align-items-start">
+                                    <!-- Иконка слева (2 колонки) -->
+                                    <div class="col-2">
+                                        {% if item.title %}
+                                                <i class="bi bi-person-bounding-box text-orange" style="font-size: 2.5rem;"></i>
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <!-- Контент справа (10 колонки) -->
+                                    <div class="col-10">
+                                        {% if item.title %}
+                                            <h5 class="mb-3">Вакансия: {{ item.title }}</h5>
+                                        {% endif %}
+
+                                        {% if item.email %}
+                                            <h5 class="mb-3">Резюме присылаейте на почту: {{ item.email }}</h5>
+                                        {% endif %}
+
+                                        {% if item.information %}
+                                            <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
+                                                {{ item.information|truncatewords:15|safe }}
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
             </div>
         </section>
 
 
 
-
+{% include 'paginator.html' %}
 {% include "contacts.html" %}
 
 {% endblock content %}

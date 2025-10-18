@@ -1,50 +1,43 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
 <main class="container my-5">
-
-
-            {% if item %}
-
+    {% if item %}
     <div class="row g-2">
         <div class="col-md-12">
-            <a href="{{ item.get_absolute_url}}"" class="card-link text-decoration-none">
+            <a class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
                         
-                    {% if item.choice %}
-                        {% if item.get_choice_display == 'Статья' %}
-                            <i class="bi bi-file-earmark text-orange" style="font-size: 2.5rem;"></i>
-                        {% elif item.get_choice_display == 'Ссылка' %}
-                            <i class="bi bi-link text-orange" style="font-size: 2.5rem;"></i>
+                        {% if item.choice %}
+                            {% if item.get_choice_display == 'Статья' %}
+                                <i class="bi bi-file-earmark text-orange" style="font-size: 2.5rem;"></i>
+                            {% elif item.get_choice_display == 'Ссылка' %}
+                                <i class="bi bi-link text-orange" style="font-size: 2.5rem;"></i>
+                            {% endif %}
                         {% endif %}
-                    {% endif %}
 
                         {% if item.title %}
-                            <h5 class="mt-3 mb-3">{{ item.choice }}: {{ item.title }}</h5>
+                            <h5 class="mt-3 mb-3 text-dark">{{ item.choice }}: {{ item.title }}</h5>
                         {% endif %}
 
                         {% if item.content %}
-                            <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
-                                {{ item.content|linebreaksbr }}</p>
+                            <div class="content-with-links">
+                                <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
+                                    {{ item.content|urlize|linebreaksbr }}
+                                </p>
+                            </div>
                         {% endif %}
 
                     </div>
                 </div>
             </a>
         </div>
+    </div>
+    {% endif %}
 
-            {% endif %}
-
-
-
-            </div>
-        </section>
 
     {% include "contacts.html" %}
-
-    
-    </main>
+</main>
 {% endblock content %}

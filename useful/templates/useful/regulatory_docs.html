@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Документы
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,9 +25,8 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_2.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
@@ -36,8 +35,10 @@
 
         <section id="services" class="mb-6">
             <div class="text-center mb-5">
-                <h2 class="text-orange text-uppercase fw-bold mb-3">Информационная лента</h2>
-                <p class="text-muted">!!!!!</p>
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Нормативные документы</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">В данном разделе собраны актуальные версии отраслевых нормативных документов, регулирующих финансовую деятельность. Представленные материалы включают ключевые законодательные акты, стандарты и регламенты, действующие на территории Российской Федерации.
+                    Информация регулярно актуализируется в соответствии с последними изменениями законодательства.
+                </p>
             </div>
             
             {% if items %}

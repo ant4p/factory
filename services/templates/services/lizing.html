@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Лизинг
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,103 +25,102 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_11.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
 
 
 
-<section id="services" class="mb-6">
-    <div class="text-center mb-5">
-        <h2 class="text-orange text-uppercase fw-bold mb-3">Получите в лизинг</h2>
-        <p class="text-muted">!!!!!</p>
-    </div>
-    
-    <div class="row g-4">
-        <!-- Легковой автомобиль -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_car' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Легковой автомобиль</h5>
-                        <p class="text-muted">Быстрое оформление гарантий для участия в тендерах и обеспечения контрактов</p>
-                    </div>
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Получите в лизинг</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания предлагает комплексные лизинговые решения для бизнеса любого масштаба и отраслевой направленности. Мы обладаем экспертизой во всех ключевых направлениях лизинга: от автомобильной техники до промышленного оборудования и специализированных активов. Наши специалисты разрабатывают индивидуальные лизинговые программы, учитывающие специфику деятельности клиента и его стратегические цели.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Легковой автомобиль -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_car' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-car-front text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Легковой автомобиль</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Идеальное решение для компаний, нуждающихся в регулярном обновлении служебного автопарка. Позволяет минимизировать первоначальные затраты на приобретение транспорта. Включает полное сопровождение сделки и страхование. Особую выгоду обеспечивает возможность применения налоговых льгот.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Грузовой автотранспорт -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_truck' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Грузовой автотранспорт</h5>
-                        <p class="text-muted">Кредиты на развитие бизнеса, пополнение оборотных средств и инвестиционные проекты</p>
-                    </div>
+                <!-- Грузовой автотранспорт -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_truck' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Грузовой автотранспорт</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Специализированное предложение для логистических и транспортных компаний. Обеспечивает своевременное обновление коммерческого автопарка без капитальных вложений. Предусматривает гибкие графики платежей с учетом сезонности бизнеса. Включает профессиональный подбор техники по грузоподъемности и назначению.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Спецтехника -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_special_tech' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Спецтехника</h5>
-                        <p class="text-muted">Приобретение оборудования, транспорта и техники на выгодных условиях</p>
-                    </div>
+                <!-- Спецтехника -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_special_tech' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-truck-flatbed text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Спецтехника</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Оптимальное решение для приобретения строительной, дорожной и сельскохозяйственной техники. Позволяет использовать современное оборудование без единовременных крупных затрат. Особенность — ускоренная амортизация в течение 3 лет. Включает технико-экономическое обоснование и подбор оптимальных моделей.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Оборудование -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_equipment' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Оборудование</h5>
-                        <p class="text-muted">Финансирование под уступку денежных требователей для роста бизнеса</p>
-                    </div>
+                <!-- Оборудование -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_equipment' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-gear text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Оборудование</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Эффективный инструмент модернизации производственных мощностей предприятия. Дает возможность внедрять современные технологические решения. Обеспечивает значительную налоговую оптимизацию. Включает профессиональный подбор и ввод в эксплуатацию оборудования.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Авто с пробегом -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_used' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Авто с пробегом</h5>
-                        <p class="text-muted">Организация международных расчетов и валютных операций</p>
-                    </div>
+                <!-- Авто с пробегом -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_used' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-star-half text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Бывшее в употреблении</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Доступный вариант для малого и среднего бизнеса. Позволяет существенно снизить финансовую нагрузку на компанию. Обеспечивает быстрый ввод в эксплуатацию проверенного оборудования. Включает профессиональную оценку технического состояния и остаточного ресурса.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Другое имущество -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_lizng_other_property' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Другое имущество</h5>
-                        <p class="text-muted">Организация международных расчетов и валютных операций</p>
-                    </div>
+                <!-- Другое имущество -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_lizng_other_property' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-pc-display-horizontal text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Другое имущество</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Универсальное решение для комплексного оснащения компании основными фондами. Охватывает все виды активов — от недвижимости до высокотехнологичного оборудования. Обеспечивает гибкие условия финансирования под специфику бизнеса. Включает экспертный подбор и оценку инвестиционной привлекательности активов.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-       
-    </div>
-</section>
+            
+            </div>
+        </section>
 
 {% include "contacts.html" %}
 

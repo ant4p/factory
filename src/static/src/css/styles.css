@@ -1,11 +1,11 @@
 :root {
-    --orange: #f54f29;
-    --orange-light: #f54f29;
-    --orange-dark: #f54f29;
+    --orange: #FF0000;
+    --orange-light: #FF0000;
+    --orange-dark: #FF0000;
 }
-
+/* #f54f29 */
 body {
-    background: #f54f29;
+    background: #FF0000;
     min-height: 100vh;
     padding: 20px;
 }
@@ -49,7 +49,7 @@ body {
 
 /* Dropdown styles */
 .dropdown-menu {
-    border: 1px solid rgba(245, 79, 41, 0.2);
+    border: 1px solid #FF0000;
 }
 
 .dropdown-item:hover {
@@ -139,7 +139,7 @@ body {
 
 .accordion-button:focus {
     border-color: var(--orange);
-    box-shadow: 0 0 0 0.2rem rgba(245, 79, 41, 0.25);
+    box-shadow: 0 0 0 0.2rem #FF0000;
 }
 
 /* Card styles */
@@ -149,7 +149,7 @@ body {
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(245, 79, 41, 0.15) !important;
+    box-shadow: 0 4px 15px #FF0000 !important;
 }
 
 /* List group styles */
@@ -191,7 +191,7 @@ body {
 
 /* Custom shadow for dropdowns */
 .shadow-sm {
-    box-shadow: 0 2px 8px rgba(245, 79, 41, 0.1) !important;
+    box-shadow: 0 2px 8px #FF0000 !important;
 }
 
 /* Hover effects for buttons */
@@ -238,7 +238,7 @@ body {
 .navbar-nav .dropdown-menu .dropdown-item.active,
 .navbar-nav .dropdown-menu .dropdown-item:hover {
     background-color: #f8f9fa !important;
-    color: #f54f29 !important;
+    color: #FF0000 !important;
 }
 
 /* Убрать все синие эффекты Bootstrap */
@@ -246,7 +246,7 @@ body {
 .navbar-nav .dropdown-item:focus, 
 .navbar-nav .dropdown-item.active {
     background-color: #f8f9fa !important;
-    color: #f54f29 !important;
+    color: #FF0000 !important;
     border-color: transparent !important;
     box-shadow: none !important;
     outline: none !important;
@@ -256,7 +256,7 @@ body {
 .navbar .dropdown-item:not(.btn):active,
 .navbar .dropdown-item:not(.btn):focus {
     background-color: #f8f9fa !important;
-    color: #f54f29 !important;
+    color: #FF0000 !important;
 }
 
 .navbar-light.bg-white {
@@ -297,16 +297,16 @@ body {
 .burger-icon line,
 .burger-icon rect,
 .burger-icon polygon {
-    stroke: #f54f29 !important;
-    fill: #f54f29 !important;
+    stroke: #FF0000 !important;
+    fill: #FF0000 !important;
 }
 
 .burger-icon:hover path,
 .burger-icon:hover line,
 .burger-icon:hover rect,
 .burger-icon:hover polygon {
-    stroke: #f54f29 !important;
-    fill: #f54f29 !important;
+    stroke: #FF0000 !important;
+    fill: #FF0000 !important;
 }
 
 /* Footer Styles */
@@ -548,7 +548,7 @@ html {
 
 .navbar .dropdown-item:active {
     background-color: #f8f9fa !important;
-    color: #ff7b2b !important;
+    color: #FF0000 !important;
 }
 
 /* Стили для пагинатора */
@@ -583,14 +583,14 @@ html {
     background-color: var(--orange);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(245, 79, 41, 0.3);
+    /* box-shadow: 0 4px 12px #FF0000; */
 }
 
 .articles__pagination-button.is-active {
     background-color: var(--orange);
     color: white;
     border-color: var(--orange);
-    box-shadow: 0 2px 8px rgba(245, 79, 41, 0.2);
+    /* box-shadow: 0 2px 8px #FF0000; */
 }
 
 /* СТРЕЛКИ БЕЗ ЗАЛИВКИ */
@@ -633,19 +633,19 @@ html {
 .articles__pagination-button.is-arrow:disabled,
 .articles__pagination-button.is-arrow.disabled {
     background-color: transparent;
-    border-color: rgba(245, 79, 41, 0.5);
+    border-color: #FF0000;
 }
 
 .articles__pagination-button.is-arrow:disabled:hover,
 .articles__pagination-button.is-arrow.disabled:hover {
     background-color: transparent;
-    border-color: rgba(245, 79, 41, 0.5);
+    border-color: #FF0000;
     transform: none;
 }
 
 .articles__pagination-button.is-arrow:disabled svg path,
 .articles__pagination-button.is-arrow.disabled svg path {
-    stroke: rgba(245, 79, 41, 0.5);
+    stroke: #FF0000;
 }
 
 /* Адаптивность */
@@ -725,4 +725,72 @@ html {
 
 .page-item:hover {
     transform: none;
+}
+
+/* Стили только для ссылок в контенте */
+/* Стили только для ссылок в контенте */
+.content-with-links a {
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.content-with-links a:hover {
+    color: #333333 !important;
+    text-decoration: underline;
+}
+
+/* Явно задаем цвет для заголовка */
+.text-dark {
+    color: #212529 !important;
+}
+
+/* Дополнительные стили для карточки */
+.hover-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.text-muted {
+  color: #6c757d;
+  text-align: justify;
+  font-size: 18px;
+  text-indent: 1.5em;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
 }

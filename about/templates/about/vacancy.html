@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main class="container my-5">
+
+
+            {% if item %}
+
+    <div class="row g-2">
+        <div class="col-md-12">
+            <a class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        
+                    {% comment %} {% if item.choice %}
+                        {% if item.get_choice_display == 'Статья' %}
+                            <i class="bi bi-file-earmark text-orange" style="font-size: 2.5rem;"></i>
+                        {% elif item.get_choice_display == 'Ссылка' %}
+                            <i class="bi bi-link text-orange" style="font-size: 2.5rem;"></i>
+                        {% endif %}
+                    {% endif %} {% endcomment %}
+
+                        {% if item.title %}
+                            <h5 class="mt-3 mb-3">Вакансия: {{ item.title }}</h5>
+                        {% endif %}
+                        
+                        {% if item.information %}
+                            <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
+                                {{ item.information|linebreaksbr }}</p>
+                        {% endif %}
+
+                        {% if item.email %}
+                            <h5 class="mt-3 mb-3">Email для связи по вакансии: {{ item.email }}</h5>
+                        {% endif %}
+                        {% if item.phone %}
+                            <h5 class="mt-3 mb-3">Телефон для связи по вакансии: {{ item.phone }}</h5>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </a>
+        </div>
+
+            {% endif %}
+
+
+
+            </div>
+        </section>
+
+    {% include "contacts.html" %}
+
+    
+    </main>
+{% endblock content %}

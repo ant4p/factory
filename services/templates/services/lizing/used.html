@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Лизинг
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,12 +25,44 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_11.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
+
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Лизинг бывшего в употреблении имущества</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">
+                    Лизинг бывшего в употреблении имущества: экономически эффективное решение для бизнеса.
+                    Лизинг подержанного оборудования и техники представляет собой доступную альтернативу приобретению новых активов, позволяющую предприятиям оптимизировать первоначальные затраты на развитие материально-технической базы. Данный финансовый инструмент особенно востребован малыми и средними предприятиями, а также компаниями, осуществляющими точечное расширение производственных мощностей. Ключевым преимуществом является значительное снижение лизинговых платежей при сохранении полного функционала использования актива. Наша компания обеспечивает комплексную экспертизу состояния предмета лизинга и предлагает адаптированные финансовые условия с учетом фактического срока службы и остаточной стоимости имущества.
+                </p>
+            </div>       
+        </section>
+
+        <section class="bg-light rounded-3 p-5 mb-6">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Возможность</h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;">быстрого расширения парка оборудования без крупных капиталовложений</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Сокращение </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> процедуры поставки и ввода в эксплуатацию по сравнению с новым оборудованием</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Снижение </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> финансовой нагрузки за счет уменьшения размера лизинговых платежей</p>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+
+
 {% include "contacts.html" %}
 
 {% endblock content %}

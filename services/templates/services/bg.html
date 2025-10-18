@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Банковские гарантии
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -26,111 +26,113 @@
             <br>
             <div class="col-lg-6">
                 <div class="bg-light rounded-2 p-2 text-center">
-                    <img src={% static "src/images/main_page.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
+                    <img src={% static "src/images/pig_2.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
 
 
 
-<section id="services" class="mb-6">
-    <div class="text-center mb-5">
-        <h2 class="text-orange text-uppercase fw-bold mb-3">Виды банковских гарантий</h2>
-        <p class="text-muted">!!!!!</p>
-    </div>
-    
-    <div class="row g-4">
-        <!-- 44  -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_44_fz' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">44-ФЗ</h5>
-                        <p class="text-muted">Быстрое оформление гарантий для участия в тендерах и обеспечения контрактов</p>
-                    </div>
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Виды банковских гарантий</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания специализируется на предоставлении полного спектра услуг в области банковских гарантий, обеспечивая комплексное решение вопросов финансового обеспечения для различных сфер бизнеса.
+                    Мы обладаем экспертизой в оформлении банковских гарантий как для государственных и муниципальных нужд (44-ФЗ, 275-ФЗ), так и для коммерческих предприятий и субъектов естественных монополий (223-ФЗ, 615-ПП). Наши специалисты сопровождают получение платежных, тендерных и таможенных гарантий, обеспечивая полное соответствие законодательным требованиям и индивидуальным потребностям клиентов.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- 44  -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_44_fz' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-4-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-4-square text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">44-ФЗ</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Специализированный финансовый инструмент для обеспечения государственных и муниципальных контрактов. Отличается строгой регламентацией, обязательным включением в реестр Минфина и соответствием установленным требованиям к банкам-гарантам.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- 223 -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_223_fz' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">223-ФЗ</h5>
-                        <p class="text-muted">Кредиты на развитие бизнеса, пополнение оборотных средств и инвестиционные проекты</p>
-                    </div>
+                <!-- 223 -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_223_fz' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-2-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-2-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-3-square text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">223-ФЗ</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Используются для обеспечения контрактов с субъектами естественных монополий и госкомпаниями. Условия гарантии определяются внутренними положениями заказчика и могут варьироваться в зависимости от конкретной организации.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- 275 -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_275_fz' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">275-ФЗ</h5>
-                        <p class="text-muted">Приобретение оборудования, транспорта и техники на выгодных условиях</p>
-                    </div>
+                <!-- 275 -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_275_fz' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-2-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-7-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-5-square text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">275-ФЗ</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Направлены на обеспечение исполнения государственного оборонного заказа. Требуют соответствия специальным критериям Минпромторга России и обязательной регистрации в реестре банковских гарантий ГОЗ.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- 615 -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_615_pp' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">615 ПП</h5>
-                        <p class="text-muted">Финансирование под уступку денежных требователей для роста бизнеса</p>
-                    </div>
+                <!-- 615 -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_615_pp' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-6-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-1-square text-orange" style="font-size: 2.5rem;"></i> <i class="bi bi-5-square text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">615 ПП</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Применяются в регулируемых секторах экономики с участием естественных монополий. Сочетают законодательные требования с корпоративными стандартами компаний-монополистов.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Коммерческая -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_commercial' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Коммерческие БГ</h5>
-                        <p class="text-muted">Организация международных расчетов и валютных операций</p>
-                    </div>
+                <!-- Коммерческая -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_commercial' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-currency-exchange text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Коммерческие БГ</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Универсальный инструмент для обеспечения обязательств в бизнес-сделках. Предлагают гибкие условия оформления и могут адаптироваться под специфику конкретной коммерческой операции.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Платежная -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_payment' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-shield text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Платежная</h5>
-                        <p class="text-muted">Страховые продукты для бизнеса и комплексной защиты активов</p>
-                    </div>
+                <!-- Платежная -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_payment' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-clipboard-check text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Платежная</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивают исполнение денежных обязательств в рамках договорных отношений. Гарантируют бенефициару получение платежа при неисполнении принципалом своих финансовых обязательств.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <!-- НПА -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_bg_another_npa' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-shield text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Другой НПА</h5>
-                        <p class="text-muted">Страховые продукты для бизнеса и комплексной защиты активов</p>
-                    </div>
+                <!-- НПА -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_bg_another_npa' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-journals text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Другой НПА</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Специализированные виды гарантий для отдельных сфер экономической деятельности. Регулируются отраслевыми нормативами в области таможенного, налогового и других видов законодательства.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-    </div>
-</section>
+            </div>
+        </section>
 
 {% include "contacts.html" %}
 

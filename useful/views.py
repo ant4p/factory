@@ -4,8 +4,8 @@ from django.views.generic import DetailView, ListView, TemplateView
 from useful.models import Article, Document
 
 
-class ShowUseful(TemplateView):
-    template_name = "useful/useful.html"
+# class ShowUseful(TemplateView):
+#     template_name = "useful/useful.html"
 
 
 class ShowUsefulRegulatoryDocs(ListView):

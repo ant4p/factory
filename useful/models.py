@@ -25,8 +25,8 @@ class Article(models.Model):
 
     class Meta:
         db_table = "article"
-        verbose_name = "Статья"
-        verbose_name_plural = "Статьи"
+        verbose_name = "Статья / Ссылка"
+        verbose_name_plural = "Статьи / Ссылки"
         ordering = ["-id"]
 
     def __str__(self):

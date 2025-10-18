@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Платежи
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,14 +25,41 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_10.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
 
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Международные платежи</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">
+                    Международные платежи: безопасные и эффективные расчеты в глобальной торговле.
+                    Организация международных платежей представляет собой комплекс финансовых услуг, обеспечивающих проведение расчетов между контрагентами из разных стран. Данный инструмент позволяет компаниям осуществлять трансграничные операции с минимальными рисками и максимальной эффективностью. Особую важность международные платежи приобретают в условиях глобализации экономики и развития внешнеторговой деятельности предприятий. Наша компания предлагает полный спектр посреднических услуг по проведению международных расчетов, включая документарные операции, банковские переводы и аккредитивные формы расчетов. Мы обеспечиваем соответствие всех операций требованиям международного права и валютного законодательства, выступая надежным партнером в осуществлении внешнеэкономической деятельности.
+                </p>
+            </div>       
+        </section>
 
+        <section class="bg-light rounded-3 p-5 mb-6">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold">Соблюдение сроков </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> проведения платежей в соответствии с условиями контрактов</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Полное соответствие </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;">  требованиям международного торгового права</p>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-orange fw-bold"> Оптимизация затрат </h3>
+                    <p class="text-muted mb-0" style="font-size: 18px;"> на конвертацию и проведение расчетных операций</p>
+                    <br>
+                </div>
+            </div>
+        </section>
 
 
 {% include "contacts.html" %}

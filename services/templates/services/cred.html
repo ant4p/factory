@@ -16,7 +16,7 @@
                 </p>
                 <div class="d-flex gap-3">
                     <a href="#services" class="btn btn-orange btn-lg px-4">
-                        Наши услуги
+                        Кредитование
                     </a>
                     <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
                         Консультация
@@ -25,90 +25,89 @@
             </div>
             <br>
             <div class="col-lg-6">
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <i class="bi bi-graph-up-arrow text-orange" style="font-size: 4rem;"></i>
-                    <p class="text-muted mt-3">Визуализация финансового роста</p>
+                <div class="bg-light rounded-2 p-2 text-center">
+                    <img src={% static "src/images/pig_6.jpg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
 
 
 
-<section id="services" class="mb-6">
-    <div class="text-center mb-5">
-        <h2 class="text-orange text-uppercase fw-bold mb-3">Виды кредитования</h2>
-        <p class="text-muted">!!!!!</p>
-    </div>
-    
-    <div class="row g-4">
-        <!-- Пополнение оборотных средств -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_cred_working_capital' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Пополнение оборотных средств</h5>
-                        <p class="text-muted">Быстрое оформление гарантий для участия в тендерах и обеспечения контрактов</p>
-                    </div>
+        <section id="services" class="mb-6">
+            <div class="text-center mb-5">
+                <h2 class="text-orange text-uppercase fw-bold mb-3">Виды кредитования</h2>
+                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания предлагает комплексные решения в области корпоративного кредитования для бизнеса любого масштаба и отраслевой принадлежности. Мы обладаем экспертизой во всех ключевых направлениях кредитования: от пополнения оборотного капитала до инвестиционных проектов. Наши специалисты разрабатывают индивидуальные финансовые решения, учитывающие специфику деятельности клиента и его стратегические цели.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Пополнение оборотных средств -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_cred_working_capital' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-arrow-repeat text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Пополнение оборотных средств</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Предназначен для финансирования текущих операционных потребностей бизнеса. Позволяет покрывать регулярные расходы: закупки сырья, выплату зарплат, налоговые платежи. Особенно актуален при сезонных всплесках активности или выполнении крупных заказов. Отличается гибкими условиями и оперативным принятием решений.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Тендерный кредит/займ -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_cred_tender' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Тендерный кредит/займ</h5>
-                        <p class="text-muted">Кредиты на развитие бизнеса, пополнение оборотных средств и инвестиционные проекты</p>
-                    </div>
+                <!-- Тендерный кредит/займ -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_cred_tender' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-file-font text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Тендерный кредит/займ</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Специализированный продукт для участников закупочных процедур. Направлен на покрытие затрат, связанных с подготовкой заявок и внесением обеспечения тендеров. Характеризуется целевым использованием средств и срочностью финансирования. Позволяет участвовать в нескольких конкурсах одновременно без отвлечения оборотных средств.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Инвестиционный кредит -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_cred_invest' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Инвестиционный кредит</h5>
-                        <p class="text-muted">Приобретение оборудования, транспорта и техники на выгодных условиях</p>
-                    </div>
+                <!-- Инвестиционный кредит -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_cred_invest' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-clipboard2-data text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Инвестиционный кредит</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Ориентирован на финансирование долгосрочных проектов развития бизнеса. Используется для модернизации производства, приобретения оборудования или расширения мощностей. Отличается длительным сроком и строгой целевой направленностью. Предусматривает индивидуальный график погашения, соответствующий этапам реализации проекта.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Исполнение контракта -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_cred_contract' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Исполнение контракта</h5>
-                        <p class="text-muted">Финансирование под уступку денежных требователей для роста бизнеса</p>
-                    </div>
+                <!-- Исполнение контракта -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_cred_contract' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-clipboard2-check text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Исполнение контракта</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Предназначен для финансирования выполнения обязательств по заключенным договорам. Позволяет покрывать затраты на материалы, работы и другие нужды, связанные с реализацией контракта. Характеризуется привязкой условий к конкретному проекту и его платежному графику. Обеспечивает отсутствие кассовых разрывов при выполнении крупных заказов.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <!-- Рефинансирование кредитов -->
-        <div class="col-md-6">
-            <a href={% url 'services:services_cred_refinance' %} class="card-link text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-card">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Рефинансирование кредитов</h5>
-                        <p class="text-muted">Организация международных расчетов и валютных операций</p>
-                    </div>
+                <!-- Рефинансирование кредитов -->
+                <div class="col-md-6">
+                    <a href={% url 'services:services_cred_refinance' %} class="card-link text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-clipboard2-minus text-orange" style="font-size: 2.5rem;"></i>
+                                <h5 class="mt-3 mb-3">Рефинансирование кредитов</h5>
+                                <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Направлен на оптимизацию существующей долговой нагрузки предприятия. Позволяет объединить несколько кредитов в один с улучшенными условиями. Снижает ежемесячную платежную нагрузку и общую стоимость заемных средств. Способствует высвобождению оборотного капитала для развития бизнеса.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-       
-    </div>
-</section>
+            
+            </div>
+        </section>
 
 {% include "contacts.html" %}
 

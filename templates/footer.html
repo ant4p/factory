@@ -34,7 +34,7 @@
                         <li class="mb-2"><a href={% url 'services:services_lizing' %} class="text-body text-decoration-none">Лизинг</a></li>
                         <li class="mb-2"><a href={% url 'services:services_factoring' %} class="text-body text-decoration-none">Факторинг</a></li>
                         <li class="mb-2"><a href={% url 'services:services_international_payments' %} class="text-body text-decoration-none">Международные платежи</a></li>
-                        <li class="mb-2"><a ref={% url 'services:services_insurance' %} class="text-body text-decoration-none">Страхование</a></li>
+                        <li class="mb-2"><a href={% url 'services:services_insurance' %} class="text-body text-decoration-none">Страхование бизнеса</a></li>
                     </ul>
                 </div>
 
@@ -64,7 +64,7 @@
                         </div>
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-geo-alt text-orange me-3"></i>
-                            <span class="text-body">Москва, ул. Примерная, д. 123</span>
+                            <span class="text-body">Москва, Автомоторная улица, 6Бс8</span>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="bi bi-clock text-orange me-3"></i>
@@ -82,10 +82,11 @@
                     <p class="text-muted mb-0"> ®Фабрика Банковских Продуктов. Все права защищены.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-muted text-decoration-none me-3">Политика конфиденциальности</a>
-                    <a href="#" class="text-muted text-decoration-none">Пользовательское соглашение</a>
+                    <a href={% url 'src:privacy_policy' %} class="text-muted text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href={% url 'src:user_agreement' %} class="text-muted text-decoration-none">Пользовательское соглашение</a>
                 </div>
             </div>
         </div>
     </div>
+                {% include 'bottom.html' %}
 </footer>

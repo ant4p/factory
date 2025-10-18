@@ -1,19 +1,20 @@
 from django.urls import path
 
 from about.views import (
-    ShowAbout,
+    # ShowAbout,
     ShowAboutBasic,
     ShowAboutOurTeam,
     ShowAboutBanksPartners,
     ShowAboutValueCooperation,
     ShowAboutJob,
+    ShowVacancy,
 )
 
 
 app_name = "about"
 
 urlpatterns = [
-    path("", ShowAbout.as_view(), name="about"),
+    # path("", ShowAbout.as_view(), name="about"),
     path("basic/", ShowAboutBasic.as_view(), name="about_basic"),
     path("our_team/", ShowAboutOurTeam.as_view(), name="about_our_team"),
     path(
@@ -25,4 +26,5 @@ urlpatterns = [
         name="about_value_cooperation",
     ),
     path("job/", ShowAboutJob.as_view(), name="about_job"),
+    path("job/<slug:slug>/", ShowVacancy.as_view(), name="vacancy"),
 ]

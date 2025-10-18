@@ -12,8 +12,9 @@
             </button>
             
             <a class="navbar-brand fw-bold text-orange fs-3" href="/">
-                Factory
+                Фабрика
             </a>
+            {% comment %} <img src={% static "src/images/F.svg" %} style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.1rem;"> {% endcomment %}
 
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -70,7 +71,7 @@
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_truck' %}>Грузовой автотранспорт</a></li>
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_special_tech' %}>Спецтехника</a></li>
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_equipment' %}>Оборудование</a></li>
-                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_used' %}>Авто с пробегом</a></li>
+                                    <li><a class="dropdown-item" href={% url 'services:services_lizng_used' %}>Бывшее в употреблении</a></li>
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_other_property' %}>Другое имущество</a></li>
                                 </ul>
                             </li>
@@ -78,7 +79,7 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href={% url 'services:services_factoring' %}>Факторинг</a></li>
                             <li><a class="dropdown-item" href={% url 'services:services_international_payments' %}>Международные платежи</a></li>
-                            <li><a class="dropdown-item" href={% url 'services:services_insurance' %}>Страхование</a></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_insurance' %}>Страхование бизнеса</a></li>
                         </ul>
                     </li>
 
@@ -135,7 +136,7 @@
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-auto">
-                                <h2 class="modal-title text-orange fw-bold mb-0" >Factory</h2>
+                                <h2 class="modal-title text-orange fw-bold mb-0" >Фабрика</h2>
                             </div>
                             <div class="col-auto">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -217,7 +218,7 @@
                                                             <a href={% url 'services:services_lizng_truck' %} class="list-group-item list-group-item-action border-0">Грузовой автотранспорт</a>
                                                             <a href={% url 'services:services_lizng_special_tech' %} class="list-group-item list-group-item-action border-0">Спецтехника</a>
                                                             <a href={% url 'services:services_lizng_equipment' %} class="list-group-item list-group-item-action border-0">Оборудование</a>
-                                                            <a href={% url 'services:services_lizng_used' %} class="list-group-item list-group-item-action border-0">Авто с пробегом</a>
+                                                            <a href={% url 'services:services_lizng_used' %} class="list-group-item list-group-item-action border-0">Бывшее в употреблении</a>
                                                             <a href={% url 'services:services_lizng_other_property' %} class="list-group-item list-group-item-action border-0">Другое имущество</a>
                                                         </div>
                                                     </div>
@@ -227,7 +228,7 @@
                                             <!-- Остальные услуги -->
                                             <a href={% url 'services:services_factoring' %} class="btn btn-outline-orange w-100 mb-2 text-start">Факторинг</a>
                                             <a href={% url 'services:services_international_payments' %} class="btn btn-outline-orange w-100 text-start">Международные платежи</a>
-                                            <a href={% url 'services:services_insurance' %} class="btn btn-outline-orange w-100 text-start">Страхование</a>
+                                            <a href={% url 'services:services_insurance' %} class="btn btn-outline-orange w-100 text-start">Страхование бизнеса</a>
                                         </div>
                                     </div>
                                 </div>

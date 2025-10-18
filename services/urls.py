@@ -1,7 +1,7 @@
 from django.urls import path
 
 from services.views import (
-    ShowServices,
+    # ShowServices,
     ShowServicesPageBG,
     ShowServicesPageCred,
     ShowServicesPageFactoring,
@@ -33,7 +33,7 @@ from services.views import (
 app_name = "services"
 
 urlpatterns = [
-    path("", ShowServices.as_view(), name="services"),
+    # path("", ShowServices.as_view(), name="services"),
     path("bg/", ShowServicesPageBG.as_view(), name="services_bg"),
     path("cred/", ShowServicesPageCred.as_view(), name="services_cred"),
     path("lizing/", ShowServicesPageLizing.as_view(), name="services_lizing"),
