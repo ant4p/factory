@@ -1,7 +1,7 @@
 location /static/ {
-    alias /factory/static/;
+    alias /cicada/static/;
 }
 
 location /media/ {
-    alias /factory/media/;
+    alias /cicada/media/;
 }
