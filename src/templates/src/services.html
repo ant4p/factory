@@ -1,3 +1,6 @@
+{% load static %}
+
+
 
 <section id="services" class="mb-6">
     <div class="text-center mb-5">
@@ -11,7 +14,7 @@
             <a href={% url 'services:services_bg' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <i class="bi bi-check2-square text-orange" style="font-size: 2.5rem;"></i>
+                        <img src={% static "src/images/small/1small.png" %} style="max-width: 150px; height: auto;"></img>
                         <h5 class="mt-3 mb-3">Банковские гарантии</h5>
                         <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивают выполнение контрактных обязательств в государственных и коммерческих закупках. Позволяют участвовать в тендерах без отвлечения оборотных средств. Гарантируют соблюдение требований 44-ФЗ, 223-ФЗ и других нормативных актов. Снижают риски неисполнения договоров для всех участников сделки.</p>
                     </div>
@@ -24,7 +27,7 @@
             <a href={% url 'services:services_cred' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
+                        <img src={% static "src/images/small/2small.png" %} style="max-width: 150px; height: auto;"></img>
                         <h5 class="mt-3 mb-3">Кредитование</h5>
                         <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Предоставляет предприятиям доступ к заемным средствам для развития бизнеса. Включает целевые программы для пополнения оборотного капитала и инвестиционных проектов. Обеспечивает гибкие условия погашения с учетом сезонности и денежных потоков. Позволяет реализовать стратегические цели без значительных первоначальных вложений.</p>
                     </div>
@@ -37,7 +40,7 @@
             <a href={% url 'services:services_lizing' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
+                        <img src={% static "src/images/small/3small.png" %} style="max-width: 100px; height: auto;"></img>
                         <h5 class="mt-3 mb-3">Лизинг</h5>
                         <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Дает возможность использовать необходимое оборудование и технику без крупных капитальных затрат. Сохраняет оборотные средства предприятия через систему лизинговых платежей. Предусматривает налоговые преимущества благодаря ускоренной амортизации. Позволяет регулярно обновлять основные фонды в соответствии с технологическими потребностями.</p>
                     </div>
@@ -50,7 +53,7 @@
             <a href={% url 'services:services_factoring' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <i class="bi bi-boxes text-orange" style="font-size: 2.5rem;"></i>
+                        <img src={% static "src/images/small/4small.jpg" %} style="max-width: 150px; height: auto;"></img>
                         <h5 class="mt-3 mb-3">Факторинг</h5>
                         <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивает ускоренное финансирование под уступку дебиторской задолженности. Позволяет получать деньги за поставленные товары без ожидания платежа от контрагента. Включает защиту от рисков неплатежей и просрочек. Оптимизирует денежные потоки и улучшает показатели оборачиваемости активов.</p>
                     </div>
