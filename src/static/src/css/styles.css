@@ -1,60 +1,58 @@
 :root {
-    --orange: #FF0000;
-    --orange-light: #FF0000;
-    --orange-dark: #FF0000;
+    --main-accent: #0fe03d;
 }
-/* #f54f29 */
+
 body {
-    background: #FF0000;
+    background: var(--main-accent);
     min-height: 100vh;
     padding: 20px;
 }
 
 /* Orange color utilities */
 .text-orange {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
 }
 
 .bg-orange {
-    background-color: var(--orange) !important;
+    background-color: var(--main-accent) !important;
 }
 
 .border-orange {
-    border-color: var(--orange) !important;
+    border-color: var(--main-accent) !important;
 }
 
 /* Button styles */
 .btn-orange {
-    background-color: var(--orange);
-    border-color: var(--orange);
+    background-color: var(--main-accent);
+    border-color: var(--main-accent);
     color: white;
 }
 
 .btn-orange:hover {
-    background-color: var(--orange-dark);
-    border-color: var(--orange-dark);
+    background-color: var(--main-accent);
+    border-color: var(--main-accent);
     color: white;
 }
 
 .btn-outline-orange {
-    color: var(--orange);
-    border-color: var(--orange);
+    color: var(--main-accent);
+    border-color: var(--main-accent);
 }
 
 .btn-outline-orange:hover {
-    background-color: var(--orange);
-    border-color: var(--orange);
+    background-color: var(--main-accent);
+    border-color: var(--main-accent);
     color: white;
 }
 
 /* Dropdown styles */
 .dropdown-menu {
-    border: 1px solid #FF0000;
+    border: 1px solid var(--main-accent);
 }
 
 .dropdown-item:hover {
-    background-color: var(--orange-light);
-    color: var(--orange);
+    background-color: var(--main-accent);
+    color: var(--main-accent);
 }
 
 .dropdown-toggle::after {
@@ -86,7 +84,7 @@ body {
 }
 
 .dropdown-submenu > a:hover .submenu-arrow {
-    color: var(--orange);
+    color: var(--main-accent);
 }
 
 /* Show submenu on hover for desktop */
@@ -96,7 +94,7 @@ body {
     }
     
     .dropdown-submenu:hover > a .submenu-arrow {
-        color: var(--orange);
+        color: var(--main-accent);
     }
 }
 
@@ -123,7 +121,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
 }
 
 /* Uppercase text for menu items */
@@ -133,13 +131,13 @@ body {
 
 /* Accordion styles */
 .accordion-button:not(.collapsed) {
-    background-color: var(--orange-light);
-    color: var(--orange);
+    background-color: var(--main-accent);
+    color: var(--main-accent);
 }
 
 .accordion-button:focus {
-    border-color: var(--orange);
-    box-shadow: 0 0 0 0.2rem #FF0000;
+    border-color: var(--main-accent);
+    box-shadow: 0 0 0 0.2rem var(--main-accent);
 }
 
 /* Card styles */
@@ -149,13 +147,13 @@ body {
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px #FF0000 !important;
+    box-shadow: 0 4px 15px var(--main-accent) !important;
 }
 
 /* List group styles */
 .list-group-item-action:hover {
-    background-color: var(--orange-light);
-    color: var(--orange);
+    background-color: var(--main-accent);
+    color: var(--main-accent);
 }
 
 /* Modal styles */
@@ -191,7 +189,7 @@ body {
 
 /* Custom shadow for dropdowns */
 .shadow-sm {
-    box-shadow: 0 2px 8px #FF0000 !important;
+    box-shadow: 0 2px 8px var(--main-accent) !important;
 }
 
 /* Hover effects for buttons */
@@ -210,25 +208,25 @@ body {
 
 .nav-link:focus,
 .nav-link.active {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
     background-color: #f8f9fa !important;
 }
 
 /* Для мобильного меню Bootstrap */
 .navbar-nav .nav-link.show {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
     background-color: #f8f9fa !important;
 }
 
 .navbar-nav .show > .nav-link {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
     background-color: #f8f9fa !important;
 }
 
 .list-group-item-action:focus,
 .list-group-item-action.active {
     background-color: #f8f9fa !important;
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
     border-color: #dee2e6;
 }
 
@@ -238,15 +236,15 @@ body {
 .navbar-nav .dropdown-menu .dropdown-item.active,
 .navbar-nav .dropdown-menu .dropdown-item:hover {
     background-color: #f8f9fa !important;
-    color: #FF0000 !important;
+    color: var(--main-accent) !important;
 }
 
-/* Убрать все синие эффекты Bootstrap */
+/* Убрать все сильные эффекты Bootstrap */
 .navbar-nav .dropdown-item:active,
 .navbar-nav .dropdown-item:focus, 
 .navbar-nav .dropdown-item.active {
     background-color: #f8f9fa !important;
-    color: #FF0000 !important;
+    color: var(--main-accent) !important;
     border-color: transparent !important;
     box-shadow: none !important;
     outline: none !important;
@@ -256,7 +254,7 @@ body {
 .navbar .dropdown-item:not(.btn):active,
 .navbar .dropdown-item:not(.btn):focus {
     background-color: #f8f9fa !important;
-    color: #FF0000 !important;
+    color: var(--main-accent) !important;
 }
 
 .navbar-light.bg-white {
@@ -297,16 +295,16 @@ body {
 .burger-icon line,
 .burger-icon rect,
 .burger-icon polygon {
-    stroke: #FF0000 !important;
-    fill: #FF0000 !important;
+    stroke: var(--main-accent) !important;
+    fill: var(--main-accent) !important;
 }
 
 .burger-icon:hover path,
 .burger-icon:hover line,
 .burger-icon:hover rect,
 .burger-icon:hover polygon {
-    stroke: #FF0000 !important;
-    fill: #FF0000 !important;
+    stroke: var(--main-accent) !important;
+    fill: var(--main-accent) !important;
 }
 
 /* Footer Styles */
@@ -319,7 +317,7 @@ footer a.text-body {
 }
 
 footer a.text-body:hover {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
 }
 
 footer .bi {
@@ -331,7 +329,7 @@ footer a:hover .bi {
 }
 
 footer a.text-muted:hover {
-    color: var(--orange) !important;
+    color: var(--main-accent) !important;
 }
 
 /* Main Content Styles */
@@ -349,7 +347,7 @@ main {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(245, 79, 41, 0.15) !important;
+    box-shadow: 0 8px 25px var(--main-accent) !important;
 }
 
 .bg-light {
@@ -375,12 +373,12 @@ html {
 /* Contact Buttons Styles */
 .btn-outline-orange {
     transition: all 0.3s ease;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--main-accent);
 }
 
 .btn-outline-orange:hover {
-    background-color: var(--orange);
-    border-color: var(--orange);
+    background-color: var(--main-accent);
+    border-color: var(--main-accent);
     transform: translateY(-2px);
 }
 
@@ -412,7 +410,7 @@ html {
 }
 
 .bank-logo {
-    height: 60px; /* Увеличиваем высоту с 40px до 60px */
+    height: 60px;
     width: auto;
     filter: grayscale(100%);
     opacity: 0.7;
@@ -424,8 +422,8 @@ html {
 .bank-item:hover .bank-logo {
     filter: grayscale(0%);
     opacity: 1;
-    transform: scale(1.2); /* Увеличиваем масштаб с 1.05 до 1.2 */
-    height: 60px; /* Сохраняем исходный размер при увеличении */
+    transform: scale(1.2);
+    height: 60px;
 }
 
 /* Анимация бесконечной прокрутки */
@@ -510,7 +508,6 @@ html {
     }
 }
 
-
 /* Стили для иконок в контактных секциях */
 .btn-outline-orange i {
     transition: all 0.3s ease;
@@ -518,13 +515,13 @@ html {
 
 .btn-outline-orange:hover i {
     transform: scale(1.2);
-    color: var(--orange) !important; /* Иконки остаются оранжевыми */
+    color: var(--main-accent) !important;
 }
 
 /* Убираем исчезновение иконок и добавляем плавное увеличение */
 .btn-outline-orange:hover {
-    background-color: white; /* Фон остается белым */
-    border-color: var(--orange);
+    background-color: white;
+    border-color: var(--main-accent);
     transform: translateY(-2px);
 }
 
@@ -543,12 +540,12 @@ html {
 }
 
 .btn-outline-orange:hover span {
-    color: var(--orange) !important; /* Текст также оранжевый */
+    color: var(--main-accent) !important;
 }
 
 .navbar .dropdown-item:active {
     background-color: #f8f9fa !important;
-    color: #FF0000 !important;
+    color: var(--main-accent) !important;
 }
 
 /* Стили для пагинатора */
@@ -567,10 +564,10 @@ html {
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--main-accent);
     background-color: transparent;
     border-radius: 8px;
-    color: var(--orange);
+    color: var(--main-accent);
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
@@ -580,33 +577,31 @@ html {
 }
 
 .articles__pagination-button:hover {
-    background-color: var(--orange);
+    background-color: var(--main-accent);
     color: white;
     transform: translateY(-2px);
-    /* box-shadow: 0 4px 12px #FF0000; */
 }
 
 .articles__pagination-button.is-active {
-    background-color: var(--orange);
+    background-color: var(--main-accent);
     color: white;
-    border-color: var(--orange);
-    /* box-shadow: 0 2px 8px #FF0000; */
+    border-color: var(--main-accent);
 }
 
 /* СТРЕЛКИ БЕЗ ЗАЛИВКИ */
 .articles__pagination-button.is-arrow {
     background-color: transparent;
-    border-color: var(--orange);
+    border-color: var(--main-accent);
 }
 
 .articles__pagination-button.is-arrow svg path {
-    stroke: var(--orange);
+    stroke: var(--main-accent);
     transition: stroke 0.3s ease;
 }
 
 .articles__pagination-button.is-arrow:hover {
-    background-color: var(--orange);
-    border-color: var(--orange);
+    background-color: var(--main-accent);
+    border-color: var(--main-accent);
     transform: translateY(-2px);
 }
 
@@ -625,7 +620,7 @@ html {
 .articles__pagination-button:disabled:hover,
 .articles__pagination-button.disabled:hover {
     background-color: transparent;
-    color: var(--orange);
+    color: var(--main-accent);
     transform: none;
     box-shadow: none;
 }
@@ -633,19 +628,19 @@ html {
 .articles__pagination-button.is-arrow:disabled,
 .articles__pagination-button.is-arrow.disabled {
     background-color: transparent;
-    border-color: #FF0000;
+    border-color: var(--main-accent);
 }
 
 .articles__pagination-button.is-arrow:disabled:hover,
 .articles__pagination-button.is-arrow.disabled:hover {
     background-color: transparent;
-    border-color: #FF0000;
+    border-color: var(--main-accent);
     transform: none;
 }
 
 .articles__pagination-button.is-arrow:disabled svg path,
 .articles__pagination-button.is-arrow.disabled svg path {
-    stroke: #FF0000;
+    stroke: var(--main-accent);
 }
 
 /* Адаптивность */
@@ -686,7 +681,7 @@ html {
 
 /* Состояния фокуса для доступности - УПРОЩЕНО */
 .articles__pagination-button:focus {
-    outline: 2px solid var(--orange);
+    outline: 2px solid var(--main-accent);
     outline-offset: 2px;
 }
 
@@ -727,7 +722,6 @@ html {
     transform: none;
 }
 
-/* Стили только для ссылок в контенте */
 /* Стили только для ссылок в контенте */
 .content-with-links a {
     color: #000000 !important;
