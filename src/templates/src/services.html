@@ -4,8 +4,8 @@
 
 <section id="services" class="mb-6">
     <div class="text-center mb-5">
-        <h2 class="text-orange text-uppercase fw-bold mb-3">Наши услуги</h2>
-        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания предлагает комплексные финансовые решения для бизнеса, охватывающие все ключевые аспекты финансового обеспечения: от банковских гарантий для участия в государственных и коммерческих закупках (включая гарантии по 44-ФЗ, 223-ФЗ, тендерные и платежные гарантии) до корпоративного кредитования (пополнение оборотных средств, инвестиционные кредиты, финансирование контрактов), лизинга различных активов (автомобильная техника, оборудование, промышленная недвижимость), факторинга (с регрессом и без регресса, международные схемы), международных платежей (аккредитивы, банковские переводы) и страховых программ для предприятий.</p>
+        <h2 class="text text-uppercase fw-bold mb-3">Наши услуги</h2>
+        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания предлагает комплексные финансовые решения для бизнеса, охватывающие все ключевые аспекты финансового обеспечения</p>
     </div>
     
     <div class="row g-4">
@@ -14,9 +14,10 @@
             <a href={% url 'services:services_bg' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <img src={% static "src/images/small/1small.png" %} style="max-width: 150px; height: auto;"></img>
+                        <i class="bi bi-clipboard2-check text-orange" style="font-size: 2.5rem;"></i>
+                        {% comment %} <img src={% static "src/images/small/1small.png" %} style="max-width: 150px; height: auto;"></img> {% endcomment %}
                         <h5 class="mt-3 mb-3">Банковские гарантии</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивают выполнение контрактных обязательств в государственных и коммерческих закупках. Позволяют участвовать в тендерах без отвлечения оборотных средств. Гарантируют соблюдение требований 44-ФЗ, 223-ФЗ и других нормативных актов. Снижают риски неисполнения договоров для всех участников сделки.</p>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">44-ФЗ, 223-ФЗ, 275-ФЗ, 615-ПП, налоговые, коммерческие и другие НПА</p>
                     </div>
                 </div>
             </a>
@@ -27,9 +28,10 @@
             <a href={% url 'services:services_cred' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <img src={% static "src/images/small/2small.png" %} style="max-width: 150px; height: auto;"></img>
+                        <i class="bi bi-cash-stack text-orange" style="font-size: 2.5rem;"></i>
+                        {% comment %} <img src={% static "src/images/small/2small.png" %} style="max-width: 150px; height: auto;"></img> {% endcomment %}
                         <h5 class="mt-3 mb-3">Кредитование</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Предоставляет предприятиям доступ к заемным средствам для развития бизнеса. Включает целевые программы для пополнения оборотного капитала и инвестиционных проектов. Обеспечивает гибкие условия погашения с учетом сезонности и денежных потоков. Позволяет реализовать стратегические цели без значительных первоначальных вложений.</p>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Кредит на исполнение контракта, рефинансирование и оборотное кредитование  </p>
                     </div>
                 </div>
             </a>
@@ -40,9 +42,10 @@
             <a href={% url 'services:services_lizing' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <img src={% static "src/images/small/3small.png" %} style="max-width: 100px; height: auto;"></img>
+                        <i class="bi bi-truck text-orange" style="font-size: 2.5rem;"></i>
+                        {% comment %} <img src={% static "src/images/small/3small.png" %} style="max-width: 100px; height: auto;"></img> {% endcomment %}
                         <h5 class="mt-3 mb-3">Лизинг</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Дает возможность использовать необходимое оборудование и технику без крупных капитальных затрат. Сохраняет оборотные средства предприятия через систему лизинговых платежей. Предусматривает налоговые преимущества благодаря ускоренной амортизации. Позволяет регулярно обновлять основные фонды в соответствии с технологическими потребностями.</p>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Транспортные средства, оборудование, спецтехника и другое движимое и недвижимое имущество</p>
                     </div>
                 </div>
             </a>
@@ -53,9 +56,10 @@
             <a href={% url 'services:services_factoring' %} class="card-link text-decoration-none">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
-                        <img src={% static "src/images/small/4small.jpg" %} style="max-width: 150px; height: auto;"></img>
+                        <i class="bi bi-arrow-left-right text-orange" style="font-size: 2.5rem;"></i>
+                        {% comment %} <img src={% static "src/images/small/4small.jpg" %} style="max-width: 150px; height: auto;"></img> {% endcomment %}
                         <h5 class="mt-3 mb-3">Факторинг</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивает ускоренное финансирование под уступку дебиторской задолженности. Позволяет получать деньги за поставленные товары без ожидания платежа от контрагента. Включает защиту от рисков неплатежей и просрочек. Оптимизирует денежные потоки и улучшает показатели оборачиваемости активов.</p>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Открытый, закрытый, с регрессом, без регресса, закупочный</p>
                     </div>
                 </div>
             </a>
@@ -67,8 +71,8 @@
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
                         <i class="bi bi-globe text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Международные платежи</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Обеспечивают безопасное проведение расчетов между контрагентами из разных стран. Включают различные формы расчетов: аккредитивы, банковские переводы, инкассо. Минимизируют валютные и политические риски во внешнеэкономической деятельности. Гарантируют соблюдение международных стандартов и требований валютного законодательства.</p>
+                        <h5 class="mt-3 mb-3">Консалтинг ВЭД</h5>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Международные платежи, логистика и таможенное оформление</p>
                     </div>
                 </div>
             </a>
@@ -80,8 +84,8 @@
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
                         <i class="bi bi-shield-shaded text-orange" style="font-size: 2.5rem;"></i>
-                        <h5 class="mt-3 mb-3">Страхование бизнеса</h5>
-                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Защищает имущественные интересы компании от различных непредвиденных обстоятельств. Включает страхование имущества, ответственности, финансовых и предпринимательских рисков. Обеспечивает компенсацию убытков при наступлении страховых случаев. Позволяет сохранить финансовую устойчивость предприятия в кризисных ситуациях.</p>
+                        <h5 class="mt-3 mb-3">Страхование</h5>
+                        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Любые виды ответственности и рисков</p>
                     </div>
                 </div>
             </a>

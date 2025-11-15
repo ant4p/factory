@@ -410,7 +410,7 @@ html {
 }
 
 .bank-logo {
-    height: 60px;
+    height: 150px;
     width: auto;
     filter: grayscale(100%);
     opacity: 0.7;
@@ -418,12 +418,28 @@ html {
     object-fit: contain;
 }
 
+.bank-logo1 {
+    height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.bank-item:hover .bank-logo1 {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.2);
+    height: 80px;
+}
+
 /* Подсветка только при наведении на конкретный логотип */
 .bank-item:hover .bank-logo {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.2);
-    height: 60px;
+    height: 150px;
 }
 
 /* Анимация бесконечной прокрутки */
