@@ -42,42 +42,35 @@
             </div>
             
             {% if items %}
-            {% for item in items %}
-            {% if item %}
 
-            <div class="row g-2">
-                <div class="col-md-12">
-                    <a href="{{ item.get_absolute_url }}" class="card-link text-decoration-none">
-                        <div class="card h-100 border-0 shadow-sm hover-card">
-                            <div class="card-body p-4">
-                                <div class="row align-items-start">
-                                    <!-- Иконка слева (2 колонки) -->
-                                    <div class="col-2">
-                                        {% if item.title %}
-                                                <i class="bi bi-file-text text-orange" style="font-size: 2.5rem;"></i>
-                                        {% endif %}
-                                    </div>
-                                    
-                                    <!-- Контент справа (10 колонки) -->
-                                    <div class="col-10">
-                                        {% if item.title %}
-                                            <h5 class="mb-3">Документ: {{ item.title }}</h5>
-                                        {% endif %}
-
-                                        {% if item.content %}
-                                            <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
-                                                {{ item.content|linebreaksbr|truncatewords:50 }}
-                                            </p>
-                                        {% endif %}
-                                    </div>
-                                </div>
+    <div class="row g-2">
+        {% for item in items %}
+        {% if item %}
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body p-6">
+                    <div class="row">
+                        <!-- Фото слева -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div class="image-container" style="height: 400px; width: 100%; overflow: hidden;">
+                                {% if item.image %}
+                                    <img src="{{ item.image.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-cover">
+                                {% endif %}
                             </div>
                         </div>
-                    </a>
+                        
+                        <!-- Информация справа -->
+                        <div class="col-12 col-md-6">
+                            {% if item.title %}
+                                <h5 class="mb-3">{{ item.content }}</h5>
+
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            {% endif %}
+        </div>
+        {% endif %}
             {% endfor %}
             {% endif %}
 
