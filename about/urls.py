@@ -4,6 +4,7 @@ from about.views import (
     # ShowAbout,
     ShowAboutBasic,
     ShowAboutOurTeam,
+    ShowCases,
     ShowAboutBanksPartners,
     ShowAboutValueCooperation,
     ShowAboutJob,
@@ -17,6 +18,7 @@ urlpatterns = [
     # path("", ShowAbout.as_view(), name="about"),
     path("basic/", ShowAboutBasic.as_view(), name="about_basic"),
     path("our_team/", ShowAboutOurTeam.as_view(), name="about_our_team"),
+    path("cases/", ShowCases.as_view(), name='cases'),
     path(
         "banks_partners/", ShowAboutBanksPartners.as_view(), name="about_banks_partners"
     ),

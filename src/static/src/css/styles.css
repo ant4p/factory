@@ -465,6 +465,9 @@ html {
     .bank-logo {
         height: 45px;
     }
+    .bank-logo1 {
+        height: 45px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -477,6 +480,9 @@ html {
     }
     
     .bank-logo {
+        height: 35px;
+    }
+    .bank-logo1 {
         height: 35px;
     }
 }
@@ -762,7 +768,7 @@ html {
 
 .text-muted {
   color: #6c757d;
-  text-align: justify;
+  text-align: center;
   font-size: 18px;
   text-indent: 1.5em;
 }

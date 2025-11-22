@@ -20,6 +20,9 @@ class ShowAboutOurTeam(ListView):
     def get_queryset(self):
         return CommandUnit.objects.all()
 
+class ShowCases(TemplateView):
+    template_name = "about/cases.html"
+
 
 class ShowAboutBanksPartners(TemplateView):
     template_name = "about/banks_partners.html"

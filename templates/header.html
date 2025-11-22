@@ -92,6 +92,7 @@
                         <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
                             <li><a class="dropdown-item" href={% url 'about:about_basic' %}>Главное</a></li>
                             <li><a class="dropdown-item" href={% url 'about:about_our_team' %}>Наша команда</a></li>
+                            <li><a class="dropdown-item" href={% url 'about:cases' %}>Кейсы</a></li>
                             <li><a class="dropdown-item" href={% url 'about:about_banks_partners' %}>Банки партнёры</a></li>
                             <li><a class="dropdown-item" href={% url 'about:about_value_cooperation' %}>Оценка сотрудничества</a></li>
                             <li><a class="dropdown-item" href={% url 'about:about_job' %}>Вакансии</a></li>
@@ -240,11 +241,12 @@
                                     <div class="card-body">
                                         <h4 class="text-orange mb-4">О КОМПАНИИ</h4>
                                         <div class="list-group list-group-flush">
-                                            <a a class="dropdown-item" href={% url 'about:about_basic' %} class="list-group-item list-group-item-action border-0">Главное</a>
-                                            <a a class="dropdown-item" href={% url 'about:about_our_team' %} class="list-group-item list-group-item-action border-0">Наша команда</a>
-                                            <a a class="dropdown-item" href={% url 'about:about_banks_partners' %} class="list-group-item list-group-item-action border-0">Банки партнёры</a>
-                                            <a a class="dropdown-item" href={% url 'about:about_value_cooperation' %} class="list-group-item list-group-item-action border-0">Оценка сотрудничества</a>
-                                            <a a class="dropdown-item" href={% url 'about:about_job' %} class="list-group-item list-group-item-action border-0">Вакансии</a>
+                                            <a href={% url 'about:about_basic' %} class="list-group-item list-group-item-action border-0">Главное</a>
+                                            <a href={% url 'about:about_our_team' %} class="list-group-item list-group-item-action border-0">Наша команда</a>
+                                            <a href={% url 'about:cases' %} class="list-group-item list-group-item-action border-0">Кейсы</a>
+                                            <a href={% url 'about:about_banks_partners' %} class="list-group-item list-group-item-action border-0">Банки партнёры</a>
+                                            <a href={% url 'about:about_value_cooperation' %} class="list-group-item list-group-item-action border-0">Оценка сотрудничества</a>
+                                            <a href={% url 'about:about_job' %} class="list-group-item list-group-item-action border-0">Вакансии</a>
                                         </div>
                                     </div>
                                 </div>

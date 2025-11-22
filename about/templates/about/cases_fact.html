@@ -1,0 +1,158 @@
+{% load static %}
+
+<section id="services" class="bg-light rounded-3 p-5 mb-6">
+        <div class="text-center mb-5">
+        <h2 class="text text-uppercase fw-bold mb-3">Факторинг</h2>
+        {% comment %} <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Мы выстраиваем долгосрочное и взаимовыгодное партнерство с ведущими финансовыми учреждениями России, что позволяет нам предлагать клиентам наиболее выгодные и разнообразные условия по всем финансовым продуктам. Это сотрудничество обеспечивает нам доступ к широкой линейке банковских продуктов и возможность подбирать оптимальные решения для каждого клиента.</p> {% endcomment %}
+    </div>
+    <!-- Первая строка с двумя элементами -->
+    <div class="row">
+        <!-- Элемент 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="card clickable-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modal1f">
+                <div class="row align-items-center flex-md-row flex-column">  <!-- Изменено на flex-column для мобильных -->
+                    <div class="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">  <!-- Изменены классы -->
+                        <img src="{% static 'src/images/cases/f1.jpg' %}"  
+                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-md-8 col-12 text-center text-md-start">  <!-- Изменены классы -->
+                        <div class="service-content">
+                            <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-start">
+                                <h4 class="card-title mb-0 me-2">Факторинг на сумму</h4>
+                                <h4 class="card-text mb-0 text-orange">222 222 000 ₽</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Элемент 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="card clickable-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modal2f">
+                <div class="row align-items-center flex-md-row flex-column">
+                    <div class="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">
+                        <img src="{% static 'src/images/cases/f2.jpg' %}"  
+                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-md-8 col-12 text-center text-md-start">
+                        <div class="service-content">
+                            <h4 class="card-title mb-1">Открытие факторинговой линии</h4>
+                            <h4 class="card-text mb-0 text-orange">88 888 000 ₽</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+<!-- Модальное окно 1 -->
+<div class="modal fade" id="modal1f" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
+                <div class="service-content">
+                            <h2 class="card-title d-inline mb-2">Факторинг на сумму - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   222 222 000 ₽</h2>
+                            
+                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="{% static 'src/images/cases/f1.jpg' %}" 
+                             class="img-fluid rounded mb-4" alt="Банковская гарантия" style="width: 390px; height: 350px;">
+                    </div>
+                    <div class="col-md-4">
+                        {% comment %} <div class="service-content">
+                            <h4 class="card-title mb-2">Банковская гарантия на</h4>
+                            <h4 class="card-text mb-2 text-orange">182 000 000</h4>
+                        </div> {% endcomment %} 
+                        <br>
+                        <h5>Условия гарантии:</h5>
+                        <p>
+                            Заказчик: АО "Транснефть"<br>
+                            <br>
+                            Сумма контракта: 999 999 999руб.<br>
+                            Сумма БГ: 222 222 000 руб.<br>
+                            Ставка банка: 99,5% годовых<br>
+                            <br>
+                            Дополнительные условия:<br>
+                            1. Поручительство собственника;<br>
+                            2. Отменено условие перевода оборотов;<br>
+                            3. Форма оплаты комиссии ежеквартально.<br>
+                            </p>                   
+
+                        
+                        <h5>Результат:</h5>
+                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Оформить заявку</button>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно 2 -->
+<div class="modal fade" id="modal2f" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
+                <div class="service-content">
+                            <h2 class="card-title d-inline mb-2">Открытие факторинговой линии - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   88 888 000 ₽</h2>
+                            
+                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="{% static 'src/images/cases/f2.jpg' %}" 
+                             class="img-fluid rounded mb-4" alt="Банковская гарантия" style="width: 390px; height: 350px;">
+                    </div>
+                    <div class="col-md-4">
+                        {% comment %} <div class="service-content">
+                            <h4 class="card-title mb-2">Банковская гарантия на</h4>
+                            <h4 class="card-text mb-2 text-orange">182 000 000</h4>
+                        </div> {% endcomment %} 
+                        <br>
+                        <h5>Условия гарантии:</h5>
+                        <p>
+                            Заказчик: АО "Транснефть"<br>
+                            <br>
+                            Сумма контракта: 999 999 999руб.<br>
+                            Сумма БГ: 88 888 000 руб.<br>
+                            Ставка банка: 99,5% годовых<br>
+                            <br>
+                            Дополнительные условия:<br>
+                            1. Поручительство собственника;<br>
+                            2. Отменено условие перевода оборотов;<br>
+                            3. Форма оплаты комиссии ежеквартально.<br>
+                            </p>                   
+
+                        
+                        <h5>Результат:</h5>
+                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Оформить заявку</button>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</div>
+

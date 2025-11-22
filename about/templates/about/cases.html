@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-6">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-dark mb-4">
+                    Успешные<br>
+                    <span class="text-orange">Кейсы</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-orange btn-lg px-4">
+                       Кейсы
+                    </a>
+                    <a href="#contacts" class="btn btn-outline-orange btn-lg px-4">
+                        Консультация
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img src={% static "src/images/masha_b.jpeg" %} style="width: 400px; height: 100%; object-fit: cover; border-radius: 0.1rem;">         
+                </div>
+            </div>
+        </section>
+
+
+  
+{% include "about/cases_bg.html" %}
+{% include "about/cases_cred.html" %}
+{% include "about/cases_lizing.html" %}
+{% include "about/cases_fact.html" %}
+
+
+
+{% include "contacts.html" %}
+
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% load static %}
+
+<section class="mb-6">
+    <div class="text-center mb-5">
+        <h2 class="text text-uppercase fw-bold mb-3">Часто задаваемые вопросы</h2>
+        {% comment %} <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;"></p> {% endcomment %}
+    </div>
+    
+    <div class="bg-white rounded-3 shadow-sm p-3">
+        <div id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="faqHeadingOne">
+                    <h5 class="mb-0">
+                        <button class="btn" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                        Я работаю со своими финансовыми партнерами, зачем мне обращаться к вам?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapseOne" class="collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div class="card-body">
+                        Очень часто помогаем компаниям, которым отказали и не смогли дать решение их текущие финансовые партнеры.
+                        Мы предлагаем комплекс финансовых услуг в одном месте.
+                    </div>
+                </div>
+            </div>
+  {% comment %} </div> {% endcomment %}  
+            <div class="card">
+                <div class="card-header" id="faqHeading2">
+                <h5 class="mb-0">
+                    <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                        Сколько стоят ваши услуги? У вас дороже чем напрямую в банке, лизинговой или факторинговой компании?
+                    </button>
+                </h5>
+                </div>
+                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                    <div class="card-body">
+                        Наши услуги для вас бесплатны. Мы работаем без наценок. Мы получаем агентское вознаграждение от банка, точно такое же, как получает сотрудник отдела продаж любой другой финансовой организации.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="faqHeading3">
+                <h5 class="mb-0">
+                    <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                        От чего зависит стоимость гарантии?
+                    </button>
+                </h5>
+                </div>
+                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                    <div class="card-body">
+                        Стоимость зависит от нескольких факторов: <br>
+                        *Финансового состояния компании – обороты, активы, долговая нагрузка, участие в предыдущих тендерах.<br>
+                        *Размеров и сроков гарантии – чем больше сумма и длиннее срок, тем выше стоимость.<br>
+                        *Требований к обеспечению – возможны залог, депозит, поручительство или иные формы обеспечения.<br>
+                        Мы не устанавливаем стоимость, но можем помочь повлиять на нее: подобрать банк с наилучшими условиями.
+                        Проработать возможные замечания и избежать дополнительных комиссий.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="faqHeading4">
+                <h5 class="mb-0">
+                    <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                        От чего зависит стоимость гарантии?
+                    </button>
+                </h5>
+                </div>
+                <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                    <div class="card-body">
+                        Сроки зависят от вашего запроса и продукта: банковская гарантия оформляется от 30 минут до 1 месяца,экспресс-кредит для бизнеса — за 5-10 дней. В стандартных случаях решение предоставляется в среднем за 1 рабочий день.
+                    </div>
+                </div>
+            </div>
+
+{% comment %} </div> {% endcomment %}
+        </div>
+</section>
