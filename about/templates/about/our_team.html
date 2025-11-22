@@ -84,7 +84,7 @@
 
     
     
-    {% if items %}
+    {% comment %} {% if items %}
     <div class="row g-2">
         {% for item in items %}
         {% if item %}
@@ -118,7 +118,46 @@
         {% endif %}
         {% endfor %}
     </div>
+    {% endif %} {% endcomment %}
+
+    {% if items %}
+<div class="row g-2">
+    {% for item in items %}
+    {% if item %}
+    <div class="col-md-4">  <!-- Изменено с col-md-6 на col-md-4 -->
+        <div class="card h-100 border-0 shadow-sm hover-card">
+            <div class="card-body p-6">
+                <div class="row">
+                    <!-- Фото слева -->
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                        <div class="image-container" style="height: 300px; width: 100%; overflow: hidden;">
+                            {% if item.photo %}
+                                <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-contain">
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Информация справа -->
+                    <div class="col-12 col-md-6">
+                        {% if item.job_title %}
+                            <h5 class="mb-2 fs-6">{{ item.job_title }}</h5>
+                            <h5 class="mb-2 fs-6">{{ item.fio }}</h5>
+                            <h5 class="mb-2 fs-6">{{ item.email }}</h5>
+                            <h5 class="mb-2 fs-6">{{ item.phone }}</h5>
+                            <h5 class="mb-2 fs-6">{{ item.information }}</h5>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endif %}
+    {% endfor %}
+</div>
+{% endif %}
+
+
+
 </section>
 
 
