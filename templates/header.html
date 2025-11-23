@@ -99,7 +99,12 @@
                         </ul>
                     </li>
 
-                    <!-- Полезное Dropdown -->
+                    <!-- Полезное -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3 text-uppercase" href={% url 'useful:useful_articles_and_links' %}>ПОЛЕЗНОЕ</a>
+                    </li>
+
+                    {% comment %} <!-- Полезное Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark fw-medium px-3 text-uppercase" href="#" role="button" 
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -109,7 +114,7 @@
                             <li><a class="dropdown-item" href={% url 'useful:useful_regulatory_docs' %}>Нормативная документация</a></li>
                             <li><a class="dropdown-item" href={% url 'useful:useful_articles_and_links' %}>Статьи и полезные ссылки</a></li>
                         </ul>
-                    </li>
+                    </li> {% endcomment %}
 
                     <!-- Контакты -->
                     <li class="nav-item">
@@ -258,8 +263,8 @@
                                     <div class="card-body">
                                         <h4 class="text-orange mb-4">ПОЛЕЗНОЕ</h4>
                                         <div class="list-group list-group-flush">
-                                            <a href={% url 'useful:useful_regulatory_docs' %} class="list-group-item list-group-item-action border-0">Нормативная документация</a>
-                                            <a href={% url 'useful:useful_articles_and_links' %} class="list-group-item list-group-item-action border-0">Статьи и полезные ссылки</a>
+                                            {% comment %} <a href={% url 'useful:useful_regulatory_docs' %} class="list-group-item list-group-item-action border-0">Нормативная документация</a> {% endcomment %}
+                                            <a href={% url 'useful:useful_articles_and_links' %} class="list-group-item list-group-item-action border-0">Полезные статьи и ссылки для бизнеса</a>
                                         </div>
                                     </div>
                                 </div>
