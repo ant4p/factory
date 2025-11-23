@@ -39,8 +39,51 @@
                     Ресурс регулярно пополняется новыми публикациями и актуальными обзорами.
                 </p>
             </div>
-            
+
             {% if items %}
+                <div class="row g-3">
+                    {% for item in items %}
+                    {% if item %}
+                    <!-- Колонка на 6 колонок для каждой статьи (всего 12 колонок в строке = 2 статьи) -->
+                    <div class="col-md-6">
+                        <a href="{{ item.get_absolute_url }}" class="card-link text-decoration-none">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-start">
+                                        <!-- Иконка слева (2 колонки) -->
+                                        <div class="col-2">
+                                            {% if item.choice %}
+                                                {% if item.get_choice_display == 'Статья' %}
+                                                    <i class="bi bi-file-earmark text-orange" style="font-size: 2rem;"></i>
+                                                {% elif item.get_choice_display == 'Ссылка' %}
+                                                    <i class="bi bi-link text-orange" style="font-size: 2rem;"></i>
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                        
+                                        <!-- Контент справа (10 колонки) -->
+                                        <div class="col-10">
+                                            {% if item.title %}
+                                                <h6 class="mb-2">{{ item.choice }}: {{ item.title }}</h6>
+                                            {% endif %}
+
+                                            {% if item.content %}
+                                                <p class="text-muted small" style='text-align: justify; text-justify: inter-word; line-height: 1.4; hyphens: auto;'>
+                                                    {{ item.content|linebreaksbr|truncatewords:30 }}
+                                                </p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            
+            {% comment %} {% if items %}
             {% for item in items %}
             {% if item %}
 
@@ -82,9 +125,9 @@
 
             {% endif %}
             {% endfor %}
-            {% endif %}
+            {% endif %} {% endcomment %}
 
-            </div>
+            {% comment %} </div> {% endcomment %}
         </section>
 
 {% include 'paginator.html' %}
