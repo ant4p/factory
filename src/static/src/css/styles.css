@@ -696,10 +696,10 @@ html {
     background-color: transparent;
 }
 
-#faqAccordion .btn:not(.collapsed) {
+/* #faqAccordion .btn:not(.collapsed) {
     background-color: #f8f9fa;
     color: var(--main-accent);
-}
+} */
 
 /* Убираем стандартные стили Bootstrap для аккордеона */
 #faqAccordion .card {
@@ -718,3 +718,4 @@ html {
     padding: 1rem 1.25rem;
     border-top: 1px solid #dee2e6;
 }
+
