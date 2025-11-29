@@ -16,6 +16,7 @@ class ShowAboutOurTeam(ListView):
     template_name = "about/our_team.html"
     context_object_name = "items"
     paginate_by = 50
+    
 
     def get_queryset(self):
         return CommandUnit.objects.all()
