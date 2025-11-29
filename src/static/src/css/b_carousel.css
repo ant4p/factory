@@ -1,0 +1,120 @@
+/* Carousel Styles */
+.banks-carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.banks-carousel-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+}
+
+/* Дублируем элементы для бесшовной прокрутки */
+.banks-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.bank-item {
+    flex-shrink: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.bank-logo {
+    height: 150px;
+    width: 150px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.bank-item:hover .bank-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Исправленная анимация */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .banks-carousel-track {
+        animation-duration: 60s;
+    }
+    
+    .bank-item {
+        padding: 0 15px;
+    }
+    
+    .bank-logo {
+        height: 160px;
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banks-carousel-track {
+        animation-duration: 60s;
+    }
+    
+    .bank-item {
+        padding: 0 10px;
+    }
+    
+    .bank-logo {
+        height: 160px;
+        width: 160px;
+    }
+}
+
+/* Градиенты по краям */
+.banks-carousel-container::before,
+.banks-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.banks-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), transparent);
+}
+
+.banks-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+}
+
+/* Поддержка prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .banks-carousel-track {
+        animation: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .banks-carousel-container::before,
+    .banks-carousel-container::after {
+        display: none;
+    }
+}
