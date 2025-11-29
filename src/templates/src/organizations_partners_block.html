@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банки-партнеры</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .partners-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .bank-item {
+            background: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            height: 140px;
+        }
+        
+        .bank-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        
+        .bank-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .bank-item:hover::before {
+            opacity: 0.05;
+        }
+        
+        .bank-logo {
+            max-width: 100%;
+            max-height: 70px;
+            filter: grayscale(30%);
+            opacity: 0.8;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .bank-item:hover .bank-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.3);
+        }
+        
+        .bank-name {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6c757d;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        
+        .bank-item:hover .bank-name {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 1200px) {
+            .banks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .banks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 20px;
+            }
+            
+            .bank-item {
+                height: 120px;
+                padding: 20px 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .banks-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+            }
+            
+            .bank-item {
+                height: 100px;
+                padding: 15px 10px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .banks-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+            
+            .bank-item {
+                height: 90px;
+                padding: 12px 8px;
+            }
+            
+            .bank-logo {
+                max-height: 50px;
+            }
+        }
+        
+        .counter-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .counter-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .counter-label {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <section class="partners-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Банки-партнёры</h2>
+                <p class="section-subtitle">Мы сотрудничаем с ведущими финансовыми учреждениями России, чтобы предложить нашим клиентам оптимальные условия по всем финансовым продуктам. Наше партнерство обеспечивает доступ к широкой линейке банковских решений.</p>
+            </div>
+            
+            <div class="banks-grid">
+                <!-- Сбербанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-sber.png" alt="Сбербанк" class="bank-logo">
+                    <div class="bank-name">Сбербанк</div>
+                </div>
+                
+                <!-- ВТБ -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-vtb.png" alt="ВТБ" class="bank-logo">
+                    <div class="bank-name">ВТБ</div>
+                </div>
+                
+                <!-- Альфа-Банк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-alfa-bank.jpg" alt="Альфа-Банк" class="bank-logo">
+                    <div class="bank-name">Альфа-Банк</div>
+                </div>
+                
+                <!-- Газпромбанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-gazprombank.png" alt="Газпромбанк" class="bank-logo">
+                    <div class="bank-name">Газпромбанк</div>
+                </div>
+                
+                <!-- Тинькофф -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-tbank.png" alt="Тинькофф" class="bank-logo">
+                    <div class="bank-name">Тинькофф</div>
+                </div>
+                
+                <!-- Совкомбанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-sovkombank.jpg" alt="Совкомбанк" class="bank-logo">
+                    <div class="bank-name">Совкомбанк</div>
+                </div>
+                
+                <!-- Промсвязьбанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-promsvyazbank.png" alt="Промсвязьбанк" class="bank-logo">
+                    <div class="bank-name">Промсвязьбанк</div>
+                </div>
+                
+                <!-- Уралсиб -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-uralsib.jpg" alt="Уралсиб" class="bank-logo">
+                    <div class="bank-name">Уралсиб</div>
+                </div>
+                
+                <!-- Ак Барс -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-ak-bars-bank.jpg" alt="Ак Барс" class="bank-logo">
+                    <div class="bank-name">Ак Барс</div>
+                </div>
+                
+                <!-- Банк Санкт-Петербург -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-bank-sankt-peterburg.png" alt="Банк Санкт-Петербург" class="bank-logo">
+                    <div class="bank-name">БСПБ</div>
+                </div>
+                
+                <!-- МКБ -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-mkb.png" alt="МКБ" class="bank-logo">
+                    <div class="bank-name">МКБ</div>
+                </div>
+                
+                <!-- Новикомбанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-novikombank.png" alt="Новикомбанк" class="bank-logo">
+                    <div class="bank-name">Новикомбанк</div>
+                </div>
+                
+                <!-- Абсолют Банк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-absolyut-bank.png" alt="Абсолют Банк" class="bank-logo">
+                    <div class="bank-name">Абсолют Банк</div>
+                </div>
+                
+                <!-- Металлинвестбанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-metallinvestbank.png" alt="Металлинвестбанк" class="bank-logo">
+                    <div class="bank-name">Металлинвестбанк</div>
+                </div>
+                
+                <!-- Экспобанк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-expobank.png" alt="Экспобанк" class="bank-logo">
+                    <div class="bank-name">Экспобанк</div>
+                </div>
+                
+                <!-- Локо-Банк -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-loko-bank.png" alt="Локо-Банк" class="bank-logo">
+                    <div class="bank-name">Локо-Банк</div>
+                </div>
+                
+                <!-- Райффайзен -->
+                <div class="bank-item">
+                    <img src="https://toplogos.ru/images/thumbs/preview-logo-raiffeisen-bank.jpg" alt="Райффайзен" class="bank-logo">
+                    <div class="bank-name">Райффайзен</div>
+                </div>
+            </div>
+            
+            <div class="counter-section">
+                <div class="counter-value">24</div>
+                <div class="counter-label">Банка-партнера по всей России</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Простой счетчик для анимации числа банков
+        document.addEventListener('DOMContentLoaded', function() {
+            const counterElement = document.querySelector('.counter-value');
+            const targetValue = 24;
+            let currentValue = 0;
+            const duration = 2000; // 2 секунды
+            const increment = targetValue / (duration / 16); // 60 FPS
+            
+            function updateCounter() {
+                currentValue += increment;
+                if (currentValue < targetValue) {
+                    counterElement.textContent = Math.floor(currentValue);
+                    setTimeout(updateCounter, 16);
+                } else {
+                    counterElement.textContent = targetValue;
+                }
+            }
+            
+            // Запускаем анимацию при загрузке страницы
+            setTimeout(updateCounter, 500);
+        });
+    </script>
+</body>
+</html>
