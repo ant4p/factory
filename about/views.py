@@ -15,10 +15,11 @@ class ShowAboutBasic(TemplateView):
 class ShowAboutOurTeam(ListView):
     template_name = "about/our_team.html"
     context_object_name = "items"
-    paginate_by = 50    
+    paginate_by = 50
 
     def get_queryset(self):
-        return CommandUnit.objects.all().order_by('id')
+        return CommandUnit.objects.all().order_by("id")
+
 
 class ShowCases(TemplateView):
     template_name = "about/cases.html"
