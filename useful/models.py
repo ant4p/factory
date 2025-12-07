@@ -47,14 +47,14 @@ class Document(models.Model):
     slug = models.SlugField(
         max_length=310, unique=True, db_index=True, verbose_name="Slug"
     )
-    image = ThumbnailerImageField(
-        upload_to="photo/%Y/%m/%d",
-        default=None,
-        null=True,
-        blank=True,
-        resize_source=dict(quality=80, size=(500, 500)),
-        verbose_name="Фото",
-    )
+    # image = ThumbnailerImageField(
+    #     upload_to="photo/%Y/%m/%d",
+    #     default=None,
+    #     null=True,
+    #     blank=True,
+    #     resize_source=dict(quality=80, size=(500, 500)),
+    #     verbose_name="Фото",
+    # )
     content = models.TextField(blank=True, verbose_name="Текст")
 
     class Meta:

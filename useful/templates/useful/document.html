@@ -14,22 +14,24 @@
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <div class="card-body text-center p-4">
                         
-                    {% if item.title %}
-                        <i class="bi bi-file-text text-orange" style="font-size: 2.5rem;"></i>
-                    {% endif %}
+                        {% if item.title %}
+                            <i class="bi bi-file-text text-orange" style="font-size: 2.5rem;"></i>
+                        {% endif %}
 
                         {% if item.title %}
-                            <h5 class="mt-3 mb-3">Документ: {{ item.title }}</h5>
+                            <h5 class="mt-3 mb-3 text-dark">{{ item.title }}</h5>
                         {% endif %}
 
-                        {% if item.image %}
+                        {% comment %} {% if item.image %}
                             
                             <img src="{{ item.image.url }}" alt="Статья" decoding="async" loading="lazy" class="article__image" height=500px weight=500px>
-                        {% endif %}
-
+                        {% endif %} {% endcomment %}
                         {% if item.content %}
-                            <p class="text-muted" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto;'>
-                                {{ item.content|linebreaksbr }}</p>
+                            <div class="content-with-links">
+                                <p class="text" style='text-align: justify; text-justify: inter-word; line-height: 1.6; hyphens: auto; color: black;'>
+                                    {{ item.content|urlize|linebreaksbr }}
+                                </p>
+                            </div>
                         {% endif %}
 
                     </div>

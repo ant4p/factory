@@ -41,38 +41,44 @@
                 </p>
             </div>
             
-            {% if items %}
-
-    <div class="row g-2">
-        {% for item in items %}
-        {% if item %}
-        <div class="col-md-6">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="card-body p-6">
-                    <div class="row">
-                        <!-- Фото слева -->
-                        <div class="col-12 col-md-6 mb-3 mb-md-0">
-                            <div class="image-container" style="height: 400px; width: 100%; overflow: hidden;">
-                                {% if item.image %}
-                                    <img src="{{ item.image.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-cover">
-                                {% endif %}
+             {% if items %}
+                <div class="row g-3">
+                    {% for item in items %}
+                    {% if item %}
+                    <!-- Колонка на 6 колонок для каждой статьи (всего 12 колонок в строке = 2 статьи) -->
+                    <div class="col-md-12">
+                        <a href="{{ item.get_absolute_url }}" class="card-link text-decoration-none">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-start">
+                                        <!-- Иконка слева (2 колонки) -->
+                                        <div class="col-2 d-flex align-items-center justify-content-center">
+                                            {% if item %}
+                                                <i class="bi bi-file-earmark text-orange" style="font-size: 2rem;"></i>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        <!-- Контент справа (10 колонки) -->
+                                        <div class="col-10 d-flex align-items-center justify-content-center">
+                                            {% if item.title %}
+                                                <h3 class="mb-2">{{ item.choice }} {{ item.title }}</h3>
+                                            {% endif %}
+{% comment %} 
+                                            {% if item.content %}
+                                                <p class="text-muted small" style='text-align: justify; text-justify: inter-word; line-height: 1.4; hyphens: auto;'>
+                                                    {{ item.content|linebreaksbr|truncatewords:30 }}
+                                                </p>
+                                            {% endif %} {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Информация справа -->
-                        <div class="col-12 col-md-6">
-                            {% if item.title %}
-                                <h5 class="mb-3">{{ item.content }}</h5>
-
-                            {% endif %}
-                        </div>
+                        </a>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-            </div>
-        </div>
-        {% endif %}
-            {% endfor %}
-            {% endif %}
+                {% endif %}
 
             </div>
         </section>

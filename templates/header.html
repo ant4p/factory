@@ -25,7 +25,7 @@
                             УСЛУГИ
                         </a>
                         <ul class="dropdown-menu shadow border-0 rounded-3 p-2" data-bs-theme="light">
-                            <!-- Банковские гарантии Submenu -->
+                            {% comment %} <!-- Банковские гарантии Submenu -->
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item d-flex justify-content-between align-items-center" 
                                     href={% url 'services:services_bg' %}>
@@ -74,9 +74,14 @@
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_used' %}>Бывшее в употреблении</a></li>
                                     <li><a class="dropdown-item" href={% url 'services:services_lizng_other_property' %}>Другое имущество</a></li>
                                 </ul>
-                            </li>
+                            </li> {% endcomment %}
                             
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_bg' %}>Банковские гарантии</a></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_cred' %}>Кредитование</a></li>
+                            <li><a class="dropdown-item" href={% url 'services:services_lizing' %}>Лизинг</a></li>
+
+
                             <li><a class="dropdown-item" href={% url 'services:services_factoring' %}>Факторинг</a></li>
                             <li><a class="dropdown-item" href={% url 'services:services_international_payments' %}>Консалтинг ВЭД</a></li>
                             <li><a class="dropdown-item" href={% url 'services:services_insurance' %}>Страхование бизнеса</a></li>
@@ -99,12 +104,12 @@
                         </ul>
                     </li>
 
-                    <!-- Полезное -->
+                    {% comment %} <!-- Полезное -->
                     <li class="nav-item">
                         <a class="nav-link text-dark fw-medium px-3 text-uppercase" href={% url 'useful:useful_articles_and_links' %}>ПОЛЕЗНОЕ</a>
-                    </li>
+                    </li> {% endcomment %}
 
-                    {% comment %} <!-- Полезное Dropdown -->
+                   <!-- Полезное Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark fw-medium px-3 text-uppercase" href="#" role="button" 
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -114,7 +119,7 @@
                             <li><a class="dropdown-item" href={% url 'useful:useful_regulatory_docs' %}>Нормативная документация</a></li>
                             <li><a class="dropdown-item" href={% url 'useful:useful_articles_and_links' %}>Статьи и полезные ссылки</a></li>
                         </ul>
-                    </li> {% endcomment %}
+                    </li>
 
                     <!-- Контакты -->
                     <li class="nav-item">
@@ -263,7 +268,7 @@
                                     <div class="card-body">
                                         <h4 class="text-orange mb-4">ПОЛЕЗНОЕ</h4>
                                         <div class="list-group list-group-flush">
-                                            {% comment %} <a href={% url 'useful:useful_regulatory_docs' %} class="list-group-item list-group-item-action border-0">Нормативная документация</a> {% endcomment %}
+                                            <a href={% url 'useful:useful_regulatory_docs' %} class="list-group-item list-group-item-action border-0">Нормативная документация</a>
                                             <a href={% url 'useful:useful_articles_and_links' %} class="list-group-item list-group-item-action border-0">Полезные статьи и ссылки для бизнеса</a>
                                         </div>
                                     </div>
