@@ -139,13 +139,28 @@
                     
                     <!-- Информация справа -->
                     <div class="col-12 col-md-6">
-                        {% if item.job_title %}
+                        {% comment %} {% if item.job_title %}
                             <h5 class="mb-2 fs-6">{{ item.job_title }}</h5>
+                        {% endif %} {% endcomment %}
+                        {% if item.fio %}
                             <h5 class="mb-2 fs-6">{{ item.fio }}</h5>
+                        {% endif %}
+                        {% if item.email %}
+                            <h5 class="mb-2 fs-6">{{ item.email }}</h5>
+                        {% endif %}
+                        {% comment %} {% if item.phone %}
+                            <h5 class="mb-2 fs-6">{{ item.phone }}</h5>
+                        {% endif %} {% endcomment %}
+                        {% if item.information %}
+                            <h5 class="mb-2 fs-6">{{ item.information }}</h5>
+                        {% endif %}
+
+
+                            {% comment %} <h5 class="mb-2 fs-6">{{ item.fio }}</h5>
                             <h5 class="mb-2 fs-6">{{ item.email }}</h5>
                             <h5 class="mb-2 fs-6">{{ item.phone }}</h5>
                             <h5 class="mb-2 fs-6">{{ item.information }}</h5>
-                        {% endif %}
+                        {% endif %} {% endcomment %}
                     </div>
                 </div>
             </div>
