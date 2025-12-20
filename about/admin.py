@@ -7,6 +7,7 @@ from about.models import CommandUnit, JobUnit, ValueUnit
 class CommandUnitAdmin(admin.ModelAdmin):
     fields = [
         'job_title',
+        'photo',
         'photo_image',
         'get_size',
         'fio',

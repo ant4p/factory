@@ -132,13 +132,13 @@
                     <div class="col-12 col-md-6 mb-3 mb-md-0">
                         <div class="image-container" style="height: 300px; width: 100%; overflow: hidden;">
                             {% if item.photo %}
-                                <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-contain">
+                                <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-100 object-fit-contain" >
                             {% endif %}
                         </div>
                     </div>
                     
                     <!-- Информация справа -->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
                         {% comment %} {% if item.job_title %}
                             <h5 class="mb-2 fs-6">{{ item.job_title }}</h5>
                         {% endif %} {% endcomment %}
