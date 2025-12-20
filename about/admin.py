@@ -13,6 +13,7 @@ class CommandUnitAdmin(admin.ModelAdmin):
         'fio',
         'email',
         'phone',
+        'information',
     ]
     readonly_fields = [
         'photo_image',
