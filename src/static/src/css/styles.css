@@ -681,7 +681,7 @@ html {
   color: #6c757d;
   text-align: center;
   font-size: 18px;
-  text-indent: 1.5em;
+  /* text-indent: 1.5em; */
 }
 
 .back-to-top {

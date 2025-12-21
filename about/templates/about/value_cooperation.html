@@ -50,11 +50,12 @@
                             <div class="row">
                                 <!-- Фото слева -->
                                 {% comment %} <div class="col-12 col-md-6 mb-3 mb-md-0"> {% endcomment %}
-                                    <div class="image-container" style="height: 400px; width: 100%; overflow: hidden;">
+                                    <div class="image-container" style="height: 100%; width: 100%; overflow: hidden;">
                                         {% if item.photo %}
-                                            <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-105">
+                                            <img src="{{ item.photo.url }}" alt="Статья" decoding="async" loading="lazy" class="full-article__image w-100 h-105" >
                                         {% endif %}
                                     </div>
+
                                 {% comment %} </div> {% endcomment %}
                                 
                                 <!-- Информация справа -->

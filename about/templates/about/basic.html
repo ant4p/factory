@@ -35,13 +35,17 @@
         <section  id="services" class="bg-light rounded-3 p-5 mb-6">
             <div class="text-center mb-5">
                 <h2 class="text text-uppercase fw-bold mb-3">Фабрика Банковских Продуктов</h2>
-                <p class="text-muted" style="text-align: center; font-size: 18px; text-indent: 1.5em;">Один партнер и 6 профильных услуг для минимизации финансовых и временных затрат на поиск решений для вашего бизнеса.
+                <p class="text-muted" style="text-align: center; font-size: 18px;">Один партнер и 6 профильных услуг для минимизации финансовых и временных затрат на поиск решений для вашего бизнеса.
                     Делаем сложные банковские продукты простыми и доступными.
                     {% comment %} Наша миссия — стать надежным проводником в мире финансов, обеспечивая предпринимателей оптимальными решениями для роста и развития.
                     Наша цель — стать вашим надежным финансовым партнером, который помогает бизнесу достигать новых вершин. {% endcomment %}
                 </p>
             </div>
+        </section>
 
+ {% include "src/banks_block.html" %}
+ 
+            <section  id="services" class="bg-light rounded-3 p-5 mb-6">
             <div class="row text-center">
         <h2 class="text text-uppercase fw-bold mb-3">Преимущества работы с нами</h2>
         <p>   </p>
@@ -176,7 +180,7 @@
 </section> {% endcomment %}
 {% comment %} 
             {% include "src/stats.html" %} {% endcomment %}
-            {% include "src/banks_block.html" %}
+           
             {% include "src/stats_2.html" %}
             {% include "src/organizations_partners_block.html" %}
 
