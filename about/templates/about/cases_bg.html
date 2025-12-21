@@ -18,8 +18,8 @@
                     <div class="col-md-8 col-12 text-center text-md-start">  <!-- Изменены классы -->
                         <div class="service-content">
                             <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-start">
-                                <h4 class="card-title mb-0 me-2">Банковская гарантия на</h4>
-                                <h4 class="card-text mb-0 text-orange">199 999 000 ₽</h4>
+                                <h4 class="card-title mb-0 me-2">Банковская гарантия без сопоставимого опыта</h4>
+                                <h4 class="card-text mb-0 text-orange">369 000 000 ₽</h4>
                             </div>
                         </div>
                     </div>
@@ -37,8 +37,8 @@
                     </div>
                     <div class="col-md-8 col-12 text-center text-md-start">
                         <div class="service-content">
-                            <h4 class="card-title mb-1">Банковская гарантия на исполнение контракта</h4>
-                            <h4 class="card-text mb-0 text-orange">88 888 000 ₽</h4>
+                            <h4 class="card-title mb-1">Банковская гарантия </h4>
+                            <h4 class="card-text mb-0 text-orange">452 200 000 ₽</h4>
                         </div>
                     </div>
                 </div>
@@ -59,8 +59,8 @@
                     <div class="col-md-8 col-12 text-center text-md-start">
                         <div class="service-content">
                             <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-start">
-                                <h4 class="card-title mb-0 me-2">Банковская гарантия на</h4>
-                                <h4 class="card-text mb-0 text-orange">99 999 000 ₽</h4>
+                                <h4 class="card-title mb-0 me-2">Банковская гарантия на исполнение контракта </h4>
+                                <h4 class="card-text mb-0 text-orange">175 000 000 ₽</h4>
                             </div>
                         </div>
                     </div>
@@ -78,13 +78,50 @@
                     </div>
                     <div class="col-md-8 col-12 text-center text-md-start">
                         <div class="service-content">
-                            <h4 class="card-title mb-1">Банковская гарантия на получение аванса</h4>
-                            <h4 class="card-text mb-0 text-orange">199 999 000 ₽</h4>
+                            <h4 class="card-title mb-1">Банковская гарантия на исполнение контракта</h4>
+                            <h4 class="card-text mb-0 text-orange">257 400 000 ₽</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Элемент 5 -->
+        <div class="col-md-6 mb-4">
+            <div class="card clickable-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modal5bg">
+                <div class="row align-items-center flex-md-row flex-column">
+                    <div class="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">
+                        <img src="{% static 'src/images/cases/b4.jpg' %}"  
+                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-md-8 col-12 text-center text-md-start">
+                        <div class="service-content">
+                            <h4 class="card-title mb-1">Гарантии для компании из РНП совокупной суммой</h4>
+                            <h4 class="card-text mb-0 text-orange">60 000 000 ₽</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Элемент 6 -->
+        <div class="col-md-6 mb-4">
+            <div class="card clickable-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modal6bg">
+                <div class="row align-items-center flex-md-row flex-column">
+                    <div class="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">
+                        <img src="{% static 'src/images/cases/b4.jpg' %}"  
+                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-md-8 col-12 text-center text-md-start">
+                        <div class="service-content">
+                            <h4 class="card-title mb-1">Банковская гарантия на исполнение обязательств по контракту</h4>
+                            <h4 class="card-text mb-0 text-orange">99 500 000 ₽</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -95,8 +132,8 @@
             <div class="modal-header">
                 {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
                 <div class="service-content">
-                            <h2 class="card-title d-inline mb-2">Банковская гарантия на - </h2>
-                            <h2 class="card-text d-inline mb-2 text-orange ">   199 999 000 ₽</h2>
+                            <h2 class="card-title d-inline mb-2">Банковская гарантия без сопоставимого опыта на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   369 000 000 ₽</h2>
                             
                         </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -115,21 +152,23 @@
                         <br>
                         <h5>Условия гарантии:</h5>
                         <p>
-                            Заказчик: АО "Транснефть"<br>
-                            <br>
-                            Сумма контракта: 999 999 999руб.<br>
-                            Сумма БГ: 199 999 000 руб.<br>
-                            Ставка банка: 99,5% годовых<br>
-                            <br>
-                            Дополнительные условия:<br>
-                            1. Поручительство собственника;<br>
-                            2. Отменено условие перевода оборотов;<br>
-                            3. Форма оплаты комиссии ежеквартально.<br>
-                            </p>                   
+                            Заказчик: ПАО "ИЛ-ВАСУ"<br>
 
+                            Договор поставки оборудования<br>
+                            Сумма БГ: 369 000 000 руб<br>
+                            {% comment %} Ставка банка: 99,5% годовых<br> {% endcomment %}
+                            <br>
+                            <h5> Сложности:</h5>
+                            1. Санкционный заказчик; <br>
+                            2. Закрытая закупка;<br>
+                            3. Валютный контракт;<br>
+                            4. Отсутствие сопоставимого опыта;<br>
+                            5. Несоответствие финансовых показателей;<br>
+                            </p>                   
+                            <br>
                         
                         <h5>Результат:</h5>
-                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                        <p>Выпущена БГ в банке ТОП-50, согласовали без залога, без депозита - под поручительство собственника</p>
                     </div>
                 </div>
             </div>
@@ -148,8 +187,8 @@
             <div class="modal-header">
                 {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
                 <div class="service-content">
-                            <h2 class="card-title d-inline mb-2">Банковская гарантия на исполнение контракта - </h2>
-                            <h2 class="card-text d-inline mb-2 text-orange ">   88 888 000 ₽</h2>
+                            <h2 class="card-title d-inline mb-2">Банковская гарантия на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   452 200 000 ₽</h2>
                             
                         </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -168,21 +207,23 @@
                         <br>
                         <h5>Условия гарантии:</h5>
                         <p>
-                            Заказчик: АО "Транснефть"<br>
-                            <br>
-                            Сумма контракта: 999 999 999руб.<br>
-                            Сумма БГ: 88 888 000 руб.<br>
-                            Ставка банка: 99,5% годовых<br>
-                            <br>
-                            Дополнительные условия:<br>
-                            1. Поручительство собственника;<br>
-                            2. Отменено условие перевода оборотов;<br>
-                            3. Форма оплаты комиссии ежеквартально.<br>
-                            </p>                   
+                            Заказчик: ООО "МИПСТРОЙ №1"<br>
 
+                            Договор на поставку железобетонных колец<br>
+                            Цена контакта: 2 730 000 000 руб<br>
+                            Сумма БГ: 452 200 000 руб<br>
+                            {% comment %} Ставка банка: 99,5% годовых<br> {% endcomment %}
+                            <br>
+                            <h5> Сложности:</h5>
+                            1. Отсутствие сопоставимого опыта;;<br>
+                            2. Требовалась низкая ставка;<br>
+                            3. Комммерческий контракт.<br>
+                            4. Несоответствие финансовых показателей.<br>
+                            </p>                   
+                            <br>
                         
                         <h5>Результат:</h5>
-                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                        <p>БГ согласована в банке ТОП-60, ставка 2,5% годовых, согласована рассрочка по оплате комисси, поручительство собственников, перевод оборотов по контракту, залог</p>
                     </div>
                 </div>
             </div>
@@ -201,8 +242,8 @@
             <div class="modal-header">
                 {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
                 <div class="service-content">
-                            <h2 class="card-title d-inline mb-2">Банковская гарантия на - </h2>
-                            <h2 class="card-text d-inline mb-2 text-orange ">   99 999 000 ₽</h2>
+                            <h2 class="card-title d-inline mb-2">Банковская гарантия на  исполнение контракта на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   175 000 000 ₽</h2>
                             
                         </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -221,21 +262,24 @@
                         <br>
                         <h5>Условия гарантии:</h5>
                         <p>
-                            Заказчик: АО "Транснефть"<br>
-                            <br>
-                            Сумма контракта: 999 999 999руб.<br>
-                            Сумма БГ: 99 999 000 руб.<br>
-                            Ставка банка: 99,5% годовых<br>
-                            <br>
-                            Дополнительные условия:<br>
-                            1. Поручительство собственника;<br>
-                            2. Отменено условие перевода оборотов;<br>
-                            3. Форма оплаты комиссии ежеквартально.<br>
-                            </p>                   
+                            {% comment %} Заказчик: АО "Транснефть"<br> {% endcomment %}
 
+                            Договор на организацию услуг лечебного диетического питания<br>
+                            Банковская гарантия на исполнение по 44-ФЗ<br>
+                            Сумма контракта: 584 000 000руб.<br>
+                            Сумма БГ: 175 000 000 руб.<br>
+
+                            <br>
+                            <h5> Сложности:</h5>
+                            1. Получение решения за 2 дня;<br>
+                            2. Низкая ставка;<br>
+                            3. Без дополнительных условий<br>
+                            4. Банк категории не ниже ТОП-10<br>
+                            </p>                   
+                            <br>
                         
                         <h5>Результат:</h5>
-                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                        <p>БГ согласована за 1,5 дня и выпущена в срок в банке ТОП-10, ставака 2,3% годовых, согласовали отмену перевода оборотов по контракту</p>
                     </div>
                 </div>
             </div>
@@ -254,8 +298,8 @@
             <div class="modal-header">
                 {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
                 <div class="service-content">
-                            <h2 class="card-title d-inline mb-2">Банковская гарантия на получение аванса - </h2>
-                            <h2 class="card-text d-inline mb-2 text-orange ">   199 999 000 ₽</h2>
+                            <h2 class="card-title d-inline mb-2">Банковская гарантия на исполнение контракта на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   257 400 000 ₽</h2>
                             
                         </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -274,21 +318,30 @@
                         <br>
                         <h5>Условия гарантии:</h5>
                         <p>
-                            Заказчик: АО "Транснефть"<br>
-                            <br>
-                            Сумма контракта: 999 999 999руб.<br>
-                            Сумма БГ: 199 999 000 руб.<br>
-                            Ставка банка: 99,5% годовых<br>
-                            <br>
-                            Дополнительные условия:<br>
-                            1. Поручительство собственника;<br>
-                            2. Отменено условие перевода оборотов;<br>
-                            3. Форма оплаты комиссии ежеквартально.<br>
-                            </p>                   
+                            {% comment %} Заказчик: АО "Транснефть"<br> {% endcomment %}
 
+                            Контракт на выполнение комплекса работ по благоустройству территории<br>
+                            Банковская гарантия на исполнение по 44-ФЗ<br>
+                            Сумма контракта: 858 000 000руб.<br>
+                            Сумма БГ: 257 400 000 руб.<br>
+
+                            <br>
+                            <h5> Сложности:</h5>
+                            1. Отсутствие сопоставимого опыта;<br>
+                            2. Несоответствие финансовых показателей;<br>
+                            3. Испорченная БКИ;<br>
+                            4. Наличии текущих просрочек;<br>
+                            5. Отработано много банков другим финансовым партнером и получены отрицательные решения;<br>
+                            6. Имели  одно предложение в очень высокой ставкой;<br>
+                            7. Текущее арбитражное дело;<br>
+                            8. Расхождения в данных финансовой отчетности;<br>
+                            9. Ограниченный срок 3 дня;<br>
+                            </p>                   
+                            <br>
                         
                         <h5>Результат:</h5>
-                        <p>БГ выпущена в срок в банке ТОП-100</p>
+                        <p>Нашли за обозначенный срок (3 дня) решение в банке ТОП-100, без залогов и депозитов, под перевод оборотов по контракту и поручиетльство собственников бизнеса.
+                        Ставка 4% годовых (в 3 раза меньше , чем предложение конкурентов). Составили пояснения о причинах просрочек . Показали банку, что по арбитражному делу исход в пользу клиента</p>
                     </div>
                 </div>
             </div>
@@ -297,5 +350,121 @@
                 <button type="button" class="btn btn-primary">Оформить заявку</button>
             </div> {% endcomment %}
         </div>
+    </div>
+</div>
+
+        <!-- Модальное окно 5 -->
+<div class="modal fade" id="modal5bg" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
+                <div class="service-content">
+                            <h2 class="card-title d-inline mb-2">Гарантии для компании из РНП совокупной суммой на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   60 000 000 ₽</h2>
+                            
+                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="{% static 'src/images/cases/b4.jpg' %}" 
+                             class="img-fluid rounded mb-4" alt="Банковская гарантия" style="width: 390px; height: 350px;">
+                    </div>
+                    <div class="col-md-4">
+                        {% comment %} <div class="service-content">
+                            <h4 class="card-title mb-2">Банковская гарантия на</h4>
+                            <h4 class="card-text mb-2 text-orange">182 000 000</h4>
+                        </div> {% endcomment %} 
+                        <br>
+                        <h5>Условия гарантии:</h5>
+                        <p>
+                            {% comment %} Заказчик: АО "Транснефть"<br> {% endcomment %}
+                            
+                            Контракты совокупной суммой 60 000 000 руб.<br>
+                            {% comment %} Банковская гарантия на исполнение по 44-ФЗ<br>
+                            Сумма контракта: 858 000 000руб.<br>
+                            Сумма БГ: 257 400 000 руб.<br> {% endcomment %}
+
+                            <br>
+                           <h5> Сложности:</h5>
+                            1. Отказы по скорингу во всех банках;<br>
+                            2. Нахождения компании в РНП;<br>
+                            {% comment %} 3. Испорченная БКИ;<br>
+                            4. Наличии текущих просрочек;<br>
+                            5. Отработано много банков другим финансовым партнером и получены отрицательные решения;<br>
+                            6. Имели  одно предложение в очень высокой ставкой;<br>
+                            7. Арбитраж;<br>
+                            8. Расхождения в данных финансовой отчетности;<br>
+                            9. Ограниченный срок 3 дня;<br> {% endcomment %}
+                            </p>                   
+                            <br>
+                        
+                        <h5>Результат:</h5>
+                        <p>Выдали гарантии в банках из ТОП-10 и ТОП-60, ставка 3% годовых, получили решение благодаря тому что давно работаем с компанией и знаем все их нюансы и сильные стороны.
+                            Пояснили банку благонадёжность компании. Объяснили причину нахождения компании в РНП.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Модальное окно 6 -->
+<div class="modal fade" id="modal6bg" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                {% comment %} <h4 class="modal-title" id="modal1Label">Банковская гарантия</h4> {% endcomment %}
+                <div class="service-content">
+                            <h2 class="card-title d-inline mb-2">Банковская гарантия на исполнение обязательств на - </h2>
+                            <h2 class="card-text d-inline mb-2 text-orange ">   99 500 000 ₽</h2>
+                            
+                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="{% static 'src/images/cases/b4.jpg' %}" 
+                             class="img-fluid rounded mb-4" alt="Банковская гарантия" style="width: 390px; height: 350px;">
+                    </div>
+                    <div class="col-md-4">
+                        {% comment %} <div class="service-content">
+                            <h4 class="card-title mb-2">Банковская гарантия на</h4>
+                            <h4 class="card-text mb-2 text-orange">182 000 000</h4>
+                        </div> {% endcomment %} 
+                        <br>
+                        <h5>Условия гарантии:</h5>
+                        <p>
+                            {% comment %} Заказчик: АО "Транснефть"<br> {% endcomment %}
+
+                            Заказчик: АО "РОССЕТИ НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР"<br>
+                            Контракт на выполнение поставки измерительного оборудования, оборудования связи<br>
+                            Сумма контракта: 580 000 000руб.<br>
+                            Сумма БГ: 99 500 000 руб.<br>
+
+                            <br>
+                            <h5> Сложности:</h5>
+                            1. Крупная гарантия для клиента;<br>
+                            2. Специфика  работы  с заказчиком;<br>
+                            3. Несопоставимая выручка;<br>
+                            4. Закупка у единственного поставщика( нет размещения на ЕИС);<br>
+                            5. Большинство банков заняты другим агентом и получены отрицательные решения;<br>
+                            {% comment %} 6. Имели  одно предложение в очень высокой ставкой;<br>
+                            7. Арбитраж;<br>
+                            8. Расхождения в данных финансовой отчетности;<br>
+                            9. Ограниченный срок 3 дня;<br> {% endcomment %}
+                            </p>                   
+                            <br>
+                        
+                        <h5>Результат:</h5>
+                        <p>Выпустили БГ без залога и поручительства других компаний в банке ТОП-10, ставка 2,7% годовых</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
