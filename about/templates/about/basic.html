@@ -5,7 +5,7 @@
 
 <main class="container my-5">
         <!-- Hero Section -->
-        <section class="row align-items-center mb-6">
+        <section class="row align-items-center mb-6 col-12">
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold text-dark mb-4" style="text-align:left">
                    Эксперты в финансовых услугах<br>
@@ -27,7 +27,7 @@
             <br>
             <div class="col-lg-6">
                 <div class="text-center">
-                    <img src={% static "src/images/masha_w.jpeg" %} style="width: 400px; height: 400px; object-fit: cover; border-radius: 0.1rem;">         
+                    <img src={% static "src/images/masha.jpg" %} style="width: 400px; height: 400px; object-fit: scale-down; border-radius: 0.1rem;">         
                 </div>
             </div>
         </section>
@@ -43,8 +43,9 @@
             </div>
         </section>
 
- {% include "src/banks_block.html" %}
- 
+            {% include "src/map.html" %}
+
+
             <section  id="services" class="bg-light rounded-3 p-5 mb-6">
             <div class="row text-center">
         <h2 class="text text-uppercase fw-bold mb-3">Преимущества работы с нами</h2>
@@ -180,6 +181,8 @@
 </section> {% endcomment %}
 {% comment %} 
             {% include "src/stats.html" %} {% endcomment %}
+            
+ {% include "src/banks_block.html" %}
            
             {% include "src/stats_2.html" %}
             {% include "src/organizations_partners_block.html" %}
