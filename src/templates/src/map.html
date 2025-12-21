@@ -1,44 +1,27 @@
 {% load static %}
 
-<section id="services" class="bg-light rounded-3 p-5 mb-6">
-        <div class="text-center mb-5">
-        <h2 class="text text-uppercase fw-bold mb-3">Дополнительно о нас</h2>
-        {% comment %} <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Мы выстраиваем долгосрочное и взаимовыгодное партнерство с ведущими финансовыми учреждениями России, что позволяет нам предлагать клиентам наиболее выгодные и разнообразные условия по всем финансовым продуктам. Это сотрудничество обеспечивает нам доступ к широкой линейке банковских продуктов и возможность подбирать оптимальные решения для каждого клиента.</p> {% endcomment %}
-    </div>
-    <!-- Первая строка с двумя элементами -->
-    <div class="row">
-        <!-- Элемент 1 -->
-        <div class="col-md-12 mb-4 ">
-            <div class="card clickable-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modal1bg">
-                <div class="row align-items-center flex-md-row flex-column">  <!-- Изменено на flex-column для мобильных -->
-                    <div class="col-md-4 col-12 text-center text-md-start mb-3 mb-md-0">  <!-- Изменены классы -->
+<section id="services" class="mb-6">
+    {% comment %} <div class="text-center mb-5">
+        <h2 class="text text-uppercase fw-bold mb-3">Наши услуги</h2>
+        <p class="text-muted" style="text-align: justify; font-size: 18px; text-indent: 1.5em;">Наша компания предлагает комплексные финансовые решения для бизнеса, охватывающие все ключевые аспекты финансового обеспечения</p>
+    </div> {% endcomment %}
+    
+    <div class="row g-4">
+        <!-- Банковские гарантии -->
+        <div class="col-md-12">
+            <a href={% url 'services:services_bg' %} class="card-link text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
                         <img src="{% static 'src/images/map.png' %}"  
-                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 250px; height: 250px;">
-                    </div>
-                    <div class="col-md-8 col-12 text-center text-md-start ">  <!-- Изменены классы -->
-                        <div class="service-content">
-                            <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-start">
-                                <h4 class="text-muted mb-0 ">Входим в &ensp;</h4>
-                                <h4 class="text-orange ">МОСКОВСКУЮ АССОЦИАЦИЮ ПРЕДПРИНИМАТЕЛЕЙ</h4>
-                                <h4 class="text-muted mb-0">Межрегиональную общественную организацию</h4>
-                            </div>
-                            <br>
-                            <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-start">
-                                <h4 class="text-muted mb-0">Баданина Мария Анатольевна - Заместитель руководителя </h4>
-                                <h4 class="text-muted mb-0">Комитета по банковскому и инвестиционному финансированию</h4>
-                            </div>
-                            <br>
-                            <div class="d-flex gap-3 ">
-                                {% comment %} <a href="https://www.moomap.ru/" target="_blank" class="btn btn-orange btn-lg px-6">
-                                    Присоединяйтесь к профессионалам
-                                </a>                     {% endcomment %}
-                                <a href="https://www.moomap.ru/" target="_blank" class="btn btn-orange btn-lg px-6 border border-2 border-primary" style="border-color: #FF2400 !important;">
-                                    Присоединяйтесь к профессионалам
-                                </a>
-                            </div>
-                        </div>
+                             class="service-image img-fluid" alt="Банковская гарантия" style="width: 200px; height: 200px;">
+                        {% comment %} <img src={% static "src/images/small/1small.png" %} style="max-width: 150px; height: auto;"></img> {% endcomment %}
+                        <h5 class="mt-3 mb-3">Входим в МОСКОВСКУЮ АССОЦИАЦИЮ ПРЕДПРИНИМАТЕЛЕЙ</h5>
+                        <h5 class="mt-3 mb-3">Межрегиональную общественную организацию</h5>
+                        <p class="text-muted" style="text-align: ; font-size: 18px; text-indent: 1.5em;">Баданина Мария Анатольевна - Заместитель руководителя</p>
+                        <p class="text-muted" style="text-align: ; font-size: 18px; text-indent: 1.5em;">Комитета по банковскому и инвестиционному финансированию</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
+
     </section>
