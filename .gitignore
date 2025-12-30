@@ -5,6 +5,7 @@ venv
 db.sqlite3
 /migrations
 /src/migrations/
+/about/migrations/
 .vscode
 settings.json
 launch.json
